@@ -6,132 +6,653 @@
 	<title>theSAOnline - Hall of Fame</title>
 </head>
 <style>
-    * {
-        box-sizing: border-box;
+    /* Google Fonts Import Link */
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+    @font-face {
+        font-family: "SAO-UI-BOLD";
+        src: url("sao-ui/SAOWelcomeTT-Bold.ttf");
+    }
+    @font-face {
+        font-family: "SAO-TT-BOLD";
+        src: url("sao-ui/SAOUITT-Bold.ttf");
+    }
+    /* Try hovering and changing the height/width */
+
+    *,
+    *::before,
+    *::after {
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    }
+
+    body,
+    html {
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
     }
 
     body {
-        display: grid;
-        place-items: center;
-        min-height: 100vh;
-    }
-
-    ul {
-        display: flex;
-        width: calc(80% - 2rem);
-        padding: 0;
-        margin: 0;
-        list-style-type: none;
-    }
-
-    li {
-        padding: 0;
-    }
-
-    img {
-    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     width: 100%;
-    object-fit: cover;
-    transition: all 0.2s ease;
+    height: 100vh;
+    overflow: hidden;
+    background-image: url('https://lh3.googleusercontent.com/d/1V1b-h2kvdDCSUHrmKkBdcKpoVzmvj7iz');
+    margin: 0;
     }
 
-    ul:is(:hover, :focus-within) img {
-    opacity: calc(0.1 + (var(--active-lerp, 0) * 0.9));
-    filter: grayscale(calc(1 - var(--active-lerp, 0)));
+    #mz-gallery-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
     }
 
-    :root {
-    --lerp-0: 1;
-    --lerp-1: 0.5787037;
-    --lerp-2: 0.2962963;
-    --lerp-3: 0.125;
-    --lerp-4: 0.037037;
-    --lerp-5: 0.0046296;
-    --lerp-6: 0;
+    #mz-gallery {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    width: calc(100% - 70px);
+    height: calc(100% - 50px);
+    max-height: 670px;
+    max-width: 1900px;
+    margin: 35px 0px;
+    background-color: black;
+    background-size: 40px 40px;
+    border: 1px dotted #01E1F9;
+    outline: 1px dotted #01E1F9;
+    outline-offset: 20px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-padding: 0 0 0 55px;
+    scroll-behavior: smooth;
+    /* firefox scrollbar */
+    scrollbar-color: #1E9DC9 #222;
+    scrollbar-width: auto;
+    animation: background 300s linear infinite;
     }
 
-    a {
-    outline-offset: 4px;
+    @keyframes background {
+    0% {
+        background-position: -300% 100%;
+    }
+    100% {
+        background-position: 100% -300%;
+    }
     }
 
-    li {
-    flex: calc(0.1 + (var(--active-lerp, 0) * 1));
-    transition: flex 0.2s ease;
+    #mz-gallery::-webkit-scrollbar {
+    height: 25px;
     }
 
-    li:is(:hover, :focus-within) {
-    --active-lerp: var(--lerp-0);
-    z-index: 7;
+    #mz-gallery::-webkit-scrollbar-track {
+    background: transparent;
     }
-    li:has( + li:is(:hover, :focus-within)),
-    li:is(:hover, :focus-within) + li {
-    --active-lerp: var(--lerp-1);
-    z-index: 6;
+
+    #mz-gallery::-webkit-scrollbar-thumb {
+    background: #666;
     }
-    li:has( + li + li:is(:hover, :focus-within)),
-    li:is(:hover, :focus-within) + li + li {
-    --active-lerp: var(--lerp-2);
-    z-index: 5;
+
+    #mz-gallery::-webkit-scrollbar-thumb:hover {
+    background: #555;
     }
-    li:has( + li + li + li:is(:hover, :focus-within)),
-    li:is(:hover, :focus-within) + li + li + li {
-    --active-lerp: var(--lerp-3);
-    z-index: 4;
+
+    #mz-gallery::-webkit-scrollbar-thumb:active {
+    background: #444;
     }
-    li:has( + li + li + li + li:is(:hover, :focus-within)),
-    li:is(:hover, :focus-within) + li + li + li + li {
-    --active-lerp: var(--lerp-4);
-    z-index: 3;
+
+    #mz-gallery::-webkit-scrollbar-button:single-button:horizontal:decrement {
+    height: 25px;
+    width: 80px;
+    background-color: #1E9DC9;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-box-arrow-left' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0v2z'/%3E%3Cpath fill-rule='evenodd' d='M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3z'/%3E%3C/svg%3E");
+    background-size: 20px;
+    background-position: center;
+    background-repeat: no-repeat;
     }
-    li:has( + li + li + li + li + li:is(:hover, :focus-within)),
-    li:is(:hover, :focus-within) + li + li + li + li + li {
-    --active-lerp: var(--lerp-5);
-    z-index: 2;
+
+    #mz-gallery::-webkit-scrollbar-button:single-button:horizontal:increment {
+    height: 25px;
+    width: 80px;
+    background-color: #1E9DC9;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-box-arrow-right' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z'/%3E%3Cpath fill-rule='evenodd' d='M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z'/%3E%3C/svg%3E");
+    background-size: 20px;
+    background-position: center;
+    background-repeat: no-repeat;
     }
-    li:has( + li + li + li + li + li + li:is(:hover, :focus-within)),
-    li:is(:hover, :focus-within) + li + li + li + li + li + li {
-    --active-lerp: var(--lerp-6);
-    z-index: 1;
+
+    #mz-gallery::-webkit-scrollbar-button:single-button:horizontal:decrement:hover,
+    #mz-gallery::-webkit-scrollbar-button:single-button:horizontal:increment:hover {
+    background-color: #1E9DC9;
     }
+
+    #mz-gallery::-webkit-scrollbar-button:single-button:horizontal:decrement:active,
+    #mz-gallery::-webkit-scrollbar-button:single-button:horizontal:increment:active {
+    background-color: #1E9DC9;
+    }
+
+    #mz-gallery figure {
+    position: relative;
+    margin: unset;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80%;
+    width: auto;
+    min-height: 100px;
+    margin-right: 60px;
+    scroll-snap-align: start;
+    transition: all 0.3s ease-in-out;
+    }
+
+    #mz-gallery figure:nth-child(1) {
+    margin-left: 60px;
+    }
+
+    #mz-gallery figure div {
+    position: absolute;
+    width: 1%;
+    height: 1%;
+    background: transparent;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    }
+
+    #mz-gallery figure div:nth-child(3) {
+    top: 0;
+    left: 0;
+    border-left: 1px dotted #1E9DC9;
+    border-top: 1px solid #1E9DC9;
+    border-radius: 15px 0px 0px 0px;
+    }
+
+    #mz-gallery figure div:nth-child(4) {
+    top: 0;
+    right: 0;
+    border-top: 1px solid white;
+    border-right: 1px solid white;
+    border-radius: 0px 15px 0px 0px;
+    }
+
+    #mz-gallery figure div:nth-child(5) {
+    bottom: 0;
+    right: 0;
+    border-right: 1px dotted #1E9DC9;
+    border-bottom: 1px solid #1E9DC9;
+    border-radius: 0px 0px 15px 0px;
+    }
+
+    #mz-gallery figure div:nth-child(6) {
+    bottom: 0;
+    left: 0;
+    border-bottom: 1px solid white;
+    border-left: 1px solid white;
+    border-radius: 0px 0px 0px 15px;
+    }
+
+    #mz-gallery figure img {
+    height: 100%;
+    width: auto;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+        rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    border-radius: 5px;
+    opacity: 0.9;
+    filter: brightness(1);
+    outline: 1px solid transparent;
+    outline-offset: -40px;
+    transition: all 0.3s ease-in-out;
+    }
+
+    #mz-gallery figure figcaption {
+    position: absolute;
+    color: transparent;
+    font-size: 18pt;
+    line-height: 24pt;
+    font-weight: 500;
+    padding: 0px 20px;
+    text-align: center;
+    width: 80%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(
+        #1E9DC9 1px,
+        rgba(0, 0, 0, 0.9) 1px
+    );
+    outline: 2px dotted transparent;
+    outline-offset: 0px;
+    background-size: 40px 40px;
+    opacity: 0;
+    border-radius: 100%;
+    pointer-events: none;
+    animation: background 100s linear infinite;
+    transition: all 0.3s ease-in-out;
+    }
+
+    #mz-gallery figure:hover img {
+    height: calc(100% - 40px);
+    filter: brightness(1.5);
+    border-radius: 10px;
+    outline: 1px solid rgba(255, 255, 255, 0.8);
+    outline-offset: 5px;
+    transition: all 0.3s ease-in-out;
+    }
+
+    #mz-gallery figure:hover {
+    padding: 0px 20px;
+    }
+
+    #mz-gallery figure:hover figcaption {
+    opacity: 0.8;
+    color: white;
+    outline: 1px solid #1E9DC9;
+    outline-offset: -20px;
+    text-shadow: 1px 1px 3px black, 0px 0px 5px black;
+    transition: all 0.3s ease-in-out;
+    }
+
+    #mz-gallery figure:hover div {
+    width: 25%;
+    height: 25%;
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+    }
+
+    @media (max-width: 1145px) {
+    #mz-gallery figure {
+        scroll-snap-align: center;
+    }
+    #mz-gallery {
+        scroll-padding: 0px 0px 0px 0px !important;
+    }
+    }
+
+    @media (max-width: 610px) {
+    #mz-gallery {
+        max-height: 320px;
+    }
+    #mz-gallery figure {
+        margin-right: 20px;
+    }
+    #mz-gallery figure:nth-child(1) {
+        margin-left: 20px;
+    }
+    }
+
+    @media (max-height: 425px) {
+    #mz-gallery figure figcaption {
+        font-size: 14pt;
+        line-height: 20pt;
+    }
+    }
+
+    @media (max-height: 340px) {
+    #mz-gallery {
+        background-size: 30px 30px;
+        scroll-padding: 0 0 0 28px;
+    }
+    #mz-gallery figure {
+        margin-right: 30px;
+    }
+    #mz-gallery figure:nth-child(1) {
+        margin-left: 30px;
+    }
+    #mz-gallery figure figcaption {
+        font-size: 12pt;
+        line-height: 18pt;
+        font-weight: 400;
+        background-size: 30px 30px;
+    }
+    }
+
+    @media (max-height: 280px) {
+    #mz-gallery::-webkit-scrollbar {
+        height: 20px;
+    }
+    #mz-gallery::-webkit-scrollbar-button:single-button:horizontal:decrement,
+    #mz-gallery::-webkit-scrollbar-button:single-button:horizontal:increment {
+        width: 80px;
+        height: 20px;
+        background-size: 15px;
+    }
+    }
+
+    @media (max-height: 230px) {
+    #mz-gallery figure figcaption {
+        font-size: 10pt;
+        line-height: 12pt;
+    }
+    #mz-gallery figure:hover figcaption {
+        outline-offset: -10px;
+    }
+    #mz-gallery figure:hover img {
+        outline-offset: 10px;
+    }
+    }
+
+    @media (max-height: 165px) {
+    #mz-gallery {
+        scroll-padding: 0 0 0 18px;
+        margin: 0px;
+    }
+    #mz-gallery figure {
+        margin-right: 20px;
+    }
+    #mz-gallery figure:nth-child(1) {
+        margin-left: 20px;
+    }
+    }
+
+    /* touch screen devices */
+
+    @media (pointer: coarse) {
+    #mz-gallery * {
+        pointer-events: none;
+    }
+    #mz-gallery::-webkit-scrollbar {
+        height: 35px;
+    }
+    #mz-gallery {
+        scroll-snap-type: unset;
+        scroll-padding: unset;
+        scroll-behavior: unset;
+    }
+    #mz-gallery figure {
+        scroll-snap-align: unset;
+    }
+    #mz-gallery figure figcaption {
+        width: 100%;
+        height: 30%;
+        bottom: 0;
+        opacity: 1;
+        background: rgba(0, 0, 0, 0.6);
+        color: white;
+        animation: unset;
+        border-radius: 0;
+        padding: 0px 15px;
+        border-top: 1px solid #1E9DC9;
+    }
+    }
+    .button-1 {
+    background-color: #1E9DC9;
+    border-radius: 8px;
+    border-style: none;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "SAO-TT-BOLD";
+    letter-spacing: 2px;
+    font-size: 14px;
+    font-weight: 500;
+    height: 40px;
+    line-height: 20px;
+    list-style: none;
+    margin: 0;
+    outline: none;
+    padding: 10px 16px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    transition: color 100ms;
+    vertical-align: baseline;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    margin: 0 auto; 
+  }
+
+  .button-1:hover,
+  .button-1:focus {
+    background-color: #F082AC;
+  }
+
 </style>
 <body>
-    <h1> TOP PLAYERS </h1>
-    <ul class="results">
-        <li class="result">
-          <a href="#"><img src="img/pl01.png" alt="City Scape" width="500" height="500" alt=""></a>
-        </li>
-        <li class="result">
-          <a href="#"><img src="img/pl02.png" alt="City Scape" width="500" height="500" alt=""></a>
-        </li>
-        <li class="result">
-          <a href="#"><img src="img/pl03.png" alt="City Scape" width="500" height="500" alt=""></a>
-        </li>
-        <li class="result">
-          <a href="#"><img src="img/pl04.png" alt="City Scape" width="500" height="500" alt=""></a>
-        </li>
-        <li class="result">
-          <a href="#"><img src="img/pl05.png" alt="City Scape" width="500" height="500" alt=""></a>
-        </li>
-        <li class="result">
-          <a href="#"><img src="img/pl06.png" alt="City Scape" width="500" height="500" alt=""></a>
-        </li>
-        <li class="result">
-          <a href="#"><img src="img/pl07.png" alt="City Scape" width="500" height="500" alt=""></a>
-        </li>
-        <li class="result">
-          <a href="#"><img src="img/pl08.png" alt="City Scape" width="500" height="500" alt=""></a>
-        </li>
-        <li class="result">
-          <a href="#"><img src="img/pl09.png" alt="City Scape" width="500" height="500" alt=""></a>
-        </li>
-        <li class="result">
-          <a href="#"><img src="img/pl10.png" alt="City Scape" width="500" height="500" alt=""></a>
-        </li>
-        <li class="result">
-          <a href="#"><img src="img/pl11.png" alt="City Scape" width="500" height="500" alt=""></a>
-        </li>
-        <li class="result">
-          <a href="#"><img src="img/pl12.png" alt="City Scape" width="500" height="500" alt=""></a>
-        </li>
-      </ul>
+    <div id="mz-gallery-container">
+        <h1 style="font-family: SAO-UI-BOLD; color: white; font-size: 50px;">HALL - OF - FAME</h1>
+        <button class="button-1" onclick="history.back()" role="button">BACK TO HOME</button>
+        <div id="mz-gallery">
+      
+          <figure>
+            <img src="img/SQUARE/Abiyan Dirgantara.jpg" alt="Night Sky" width="700" height="700">
+            <figcaption>Abiyan Dirgantara</figcaption>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </figure>
+      
+          <figure>
+            <img src="img/SQUARE/Altaraine Joyce Salvatore.png" alt="Ravine Between Rocks" width="700" height="700">
+            <figcaption>Altaraine Joyce Salvatore</figcaption>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </figure>
+      
+          <figure>
+            <img src="img/SQUARE/Atalaric Kanigara.jpg" alt="Wheat Farm" width="700" height="700">
+            <figcaption>Atalaric Kanigara</figcaption>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </figure>
+      
+          <figure>
+            <img src="img/SQUARE/Bruguiera Evanniko.jpg" alt="City Street" width="700" height="700">
+            <figcaption>Bruguiera Evanniko</figcaption>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </figure>
+      
+          <figure>
+            <img src="img/SQUARE/Celesta Autumn Haven.png" alt="Crumbling Pier" width="700" height="700">
+            <figcaption>Celesta Autumn Haven</figcaption>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </figure>
+      
+          <figure>
+            <img src="img/SQUARE/Celeste Abigail Holme.png" alt="Foggy Mountains" width="700" height="700">
+            <figcaption>Celeste Abigail Holme</figcaption>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </figure>
+      
+          <figure>
+            <img src="img/SQUARE/Claretta Meisie.jpg" alt="Dense Forest" width="700" height="700">
+            <figcaption>Claretta Meisie</figcaption>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </figure>
+      
+          <figure>
+            <img src="img/SQUARE/Gauthier Izaak.jpg" alt="Sunset Over Mountains" width="700" height="700">
+            <figcaption>Gauthier Izaak</figcaption>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </figure>
+      
+          <figure>
+            <img src="img/SQUARE/Hadan Jimon P.jpg" alt="SUV in Front of Building" width="700" height="700">
+            <figcaption>Hadan Jimon P</figcaption>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </figure>
+      
+          <figure>
+            <img src="img/SQUARE/Aleric Rezvan Milverton .jpg" alt="Classic Vehicle" width="700" height="700">
+            <figcaption>Aleric Rezvan Milverton</figcaption>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </figure>
+      
+          <figure>
+            <img src="img/SQUARE/Janealy Kaleena.jpg" alt="Stacked Rocks" width="700" height="700">
+            <figcaption>Janealy Kaleena</figcaption>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </figure>
+      
+          <figure>
+            <img src="img/SQUARE/Jeano Malviano .jpg" alt="Brick Wall" width="700" height="700">
+            <figcaption>Jeano Malviano</figcaption>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </figure>
+      
+          <figure>
+            <img src="img/SQUARE/Jemima Kalani.png" alt="Waterfront" width="700" height="700">
+            <figcaption>Jemima Kalani</figcaption>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </figure>
+      
+          <figure>
+            <img src="img/SQUARE/Jody Bennett.jpg" alt="Overgrown Buildings" width="700" height="700">
+            <figcaption>Jody Bennett</figcaption>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </figure>
+      
+          <figure>
+            <img src="img/SQUARE/Jonathan Gabriel.jpg" alt="Dying Trees" width="700" height="700">
+            <figcaption>Jonathan Gabriel</figcaption>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </figure>
+
+          <figure>
+            <img src="img/SQUARE/Lucian Rahandika.jpeg" alt="Ocean View" width="700" height="700">
+            <figcaption>Lucian Rahandika</figcaption>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </figure>
+
+          <figure>
+            <img src="img/SQUARE/Mahardika Askari.jpg" alt="Ocean View" width="700" height="700">
+            <figcaption>Mahardika Askari</figcaption>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </figure>
+
+          <figure>
+            <img src="img/SQUARE/Marvin L. Salazar.jpg" alt="Ocean View" width="700" height="700">
+            <figcaption>Marvin L. Salazar</figcaption>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </figure>
+
+          <figure>
+            <img src="img/SQUARE/Katarhea Ysabelle.jpg" alt="Ocean View" width="700" height="700">
+            <figcaption>Katarhea Ysabelle</figcaption>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </figure>
+
+          <figure>
+            <img src="img/SQUARE/Narayan.jpeg" alt="Ocean View" width="700" height="700">
+            <figcaption>Narayan</figcaption>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </figure>
+
+          <figure>
+            <img src="img/SQUARE/Revandra Theodore.jpg" alt="Ocean View" width="700" height="700">
+            <figcaption>Revandra Theodore</figcaption>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </figure>
+
+          <figure>
+            <img src="img/SQUARE/Aichi Chye.jpg" alt="Ocean View" width="700" height="700">
+            <figcaption>Aichi Chye</figcaption>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </figure>
+
+          <figure>
+            <img src="img/SQUARE/Sekala Raditya.jpg" alt="Ocean View" width="700" height="700">
+            <figcaption>Sekala Raditya</figcaption>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </figure>
+
+          <figure>
+            <img src="img/SQUARE/Takanashi Ryoma .jpg" alt="Ocean View" width="700" height="700">
+            <figcaption>Takanashi Ryoma</figcaption>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </figure>
+
+          <figure>
+            <img src="img/SQUARE/Zhia Aleeza .jpg" alt="Ocean View" width="700" height="700">
+            <figcaption>Zhia Aleeza</figcaption>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </figure>
+      
+        </div>
+      
+      </div>
 </body>
