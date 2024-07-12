@@ -6,9 +6,15 @@ https://www.tooplate.com/view/2122-nano-folio
 
 */
 
+@font-face {
+    font-family: "SAO-TT";
+    src: url("../sao-ui/SAOUITT-Regular.ttf");
+}
+
 html { overflow-x: hidden; }
 
 body {
+    background-image: url('https://lh3.googleusercontent.com/d/1V1b-h2kvdDCSUHrmKkBdcKpoVzmvj7iz');
     margin: 0;
     padding: 0;
     font-family: 'Source Sans Pro', sans-serif;
@@ -144,6 +150,9 @@ address { font-style: normal; }
     text-align: right;
     padding: 0;
     margin: 0; 
+    font-family: SAO-TT;
+    letter-spacing: 2px;
+
 }
 
 .filters-button-group li {
@@ -152,7 +161,7 @@ address { font-style: normal; }
     margin-left: 40px;
 }
 
-.filters-button-group li a.active { color: #F96699; }
+.filters-button-group li a.active { color: red; }
 .tm-gallery { margin: -10px; }
 
 .tm-gallery-item {
