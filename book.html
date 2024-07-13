@@ -22,6 +22,7 @@
     body {
         margin: 0;
         padding: 0;
+        background-image: url('https://lh3.googleusercontent.com/d/1V1b-h2kvdDCSUHrmKkBdcKpoVzmvj7iz');
     }
 
     h1,
@@ -34,10 +35,8 @@
     }
 
     main {
-        background-image: url('https://lh3.googleusercontent.com/d/1V1b-h2kvdDCSUHrmKkBdcKpoVzmvj7iz');
         display: flex;
         justify-content: center;
-        background-color: #d9d9d9;
     }
 
     .book {
@@ -182,38 +181,6 @@
     .book:hover > .book-content h3,
     .book:hover > .book-content p {
         opacity: 1;
-    }
-
-    /* Responsive adjustments */
-    @media only screen and (max-width: 768px) {
-        .book > div {
-            width: 90%; /* Adjust width for smaller screens */
-            transform: scale(0.7); /* Scale down for smaller screens */
-        }
-
-        .book-content {
-            transform: scale(0.7) translateY(0); /* Adjust scale and transform for smaller screens */
-        }
-    }
-
-    @media only screen and (max-width: 480px) {
-        .book {
-            --book-height: 80vh; /* Adjust book height for smaller screens */
-            --book-ratio: 1.2; /* Adjust ratio for smaller screens */
-        }
-
-        .book > div {
-            width: 95%; /* Adjust width for very small screens */
-            transform: scale(0.6); /* Scale down more for very small screens */
-        }
-
-        .book-content {
-            transform: scale(0.6) translateY(0); /* Adjust scale and transform for very small screens */
-        }
-
-        h1 {
-            font-size: 72px; /* Decrease font size for smaller screens */
-        }
     }
 
 </style>
