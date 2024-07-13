@@ -6,6 +6,7 @@
 	<title>theSAOnline - Hall of Fame</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.metroui.org.ua/current/metro.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
 <style>
     @font-face {
@@ -68,103 +69,87 @@
         text-align:center;
         font-family: SAO-TT; 
         letter-spacing: 1px;
-        padding:10px 15px;
+        padding:10px 10px 10px 10px;
         margin:10px;
-        background:red;
         font-size:18px;
-        background-color:#efefef;
         border-radius:3px;
         box-shadow:0 1px 2px rgba(0,0,0,.3);
         cursor:pointer;
+        color: black;
         &:hover {
             color:white;
             background:#009bd5;
         }
         }
     } 
-    .popup {
-      position: fixed;
-      z-index: 1;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      overflow: auto;
-      background-color: rgba(
-          0,
-          0,
-          0,
-          0.4
-      );
-      display: none;
-    }
-    .popup-content {
-      background-color: #080D19;
-      margin: 5% auto;
-      padding: 10px;
-      border: 1px solid #888888;
-      font-weight: bolder;
-    }
-    .popup-content button {
-      display: block;
-      margin: 0 auto;
-    }
-    .show {
-      display: block;
+    .w3-bar-item img {
+      max-width: 30px; /* Maximum width of the image */
+      max-height: 30px; /* Maximum height of the image */
+      vertical-align: middle; /* Align the image vertically within the anchor */
+      margin-right: 10px; /* Add spacing between the image and text */
     }
 </style>
 <body>
-        <h1>THE GIFTS</h1>
-        <h4>Click your name!</h4>
-        <div class="buttons">
-          <div class="button" onclick="togglePopup('myPopup', 'PL01')">Abiyan Dirgantara</div>
-          <div class="button" onclick="togglePopup('myPopup', 'PL03')">Altaraine Joyce Salvatore</div>
-          <div class="button" onclick="togglePopup('myPopup', 'PL04')">Atalaric Kanigara</div>
-          <div class="button" onclick="togglePopup('myPopup', 'PL06')">Bruguiera Evanniko</div>
-          <div class="button" onclick="togglePopup('myPopup', 'PL07')">Celesta Autumn Haven</div>
-          <div class="button" onclick="togglePopup('myPopup', 'PL08')">Celeste Abigail Holme</div>
-          <div class="button" onclick="togglePopup('myPopup', 'PL10')">Claretta Meisie</div>
-          <div class="button" onclick="togglePopup('myPopup', 'PL13')">Gauthier Izaak</div>
-          <div class="button" onclick="togglePopup('myPopup', 'PL15')">Hadan Jimon P</div>
-          <div class="button" onclick="togglePopup('myPopup', 'PL16')">Aleric Rezvan Milverton</div>
-          <div class="button" onclick="togglePopup('myPopup', 'PL17')">Janealy Kaleena</div>
-          <div class="button" onclick="togglePopup('myPopup', 'PL18')">Jeano Malviano</div>
-          <div class="button" onclick="togglePopup('myPopup', 'PL19')">Jemima Kalani</div>
-          <div class="button" onclick="togglePopup('myPopup', 'PL20')">Jody Bennett</div>
-          <div class="button" onclick="togglePopup('myPopup', 'PL21')">Jonathan Gabriel</div>
-          <div class="button" onclick="togglePopup('myPopup', 'PL22')">Lucian Rahandika</div>
-          <div class="button" onclick="togglePopup('myPopup', 'PL24')">Mahardika Askari</div>
-          <div class="button" onclick="togglePopup('myPopup', 'PL25')">Marvin L. Salazar</div>
-          <div class="button" onclick="togglePopup('myPopup', 'PL26')">Katarhea Ysabelle</div>
-          <div class="button" onclick="togglePopup('myPopup', 'PL28')">Narayan</div>
-          <div class="button" onclick="togglePopup('myPopup', 'PL29')">Revandra Theodore</div>
-          <div class="button" onclick="togglePopup('myPopup', 'PL30')">Aichi Chye</div>
-          <div class="button" onclick="togglePopup('myPopup', 'PL31')">Sekala Raditya</div>
-          <div class="button" onclick="togglePopup('myPopup', 'PL34')">Takanashi Ryoma</div>
-          <div class="button" onclick="togglePopup('myPopup', 'PL36')">Zhia Aleeza</div>
-        </div>
-
-        <div id="myPopup" class="popup">
-            <div class="popup-content">
-                <img id="popupImage" src="" style="display: block; margin-left: auto; margin-right: auto; height: auto;" width="1200" alt="congrats">
-                <br>
-                <button id="closePopup" onclick="closePopup('myPopup')" style="font-size: 40px;">
-                    CLOSE
-                </button>
-            </div>
-        </div>
+    <button class="w3-button w3-xlarge" style="background-color: rgb(233, 237, 246); position: fixed; z-index: 1;" onclick="w3_open()">☰</button>
+    <div class="w3-sidebar w3-bar-block w3-border-right" style="display:none; z-index: 2" id="mySidebar">
+        <button onclick="w3_close()" class="w3-bar-item w3-large">Close &times;</button>
+        <a href="./" class="w3-bar-item w3-button">
+          <img src="https://lh3.googleusercontent.com/d/1GX42FIIBDPQTVvGEj1PhJjleSnx46gp9" alt="Icon Profile">
+          HOME
+        </a>
+        <a href="./hall.html" class="w3-bar-item w3-button">
+          <img src="https://lh3.googleusercontent.com/d/1QRSKuwmb2PxH0b4sTsne0Xv89yBujNDc" alt="Icon Merchant">
+          HALL OF FAME
+        </a>
+        <a href="./gifts.html" class="w3-bar-item w3-button">
+          <img src="https://lh3.googleusercontent.com/d/1QRSKuwmb2PxH0b4sTsne0Xv89yBujNDc" alt="Icon Merchant">
+          THE GIFTS
+        </a>
+        <a href="./book3.html" class="w3-bar-item w3-button">
+          <img src="https://lh3.googleusercontent.com/d/1QRSKuwmb2PxH0b4sTsne0Xv89yBujNDc" alt="Icon Merchant">
+          PLOT STORIES
+        </a>
+        <a href="./gallery.html" class="w3-bar-item w3-button">
+          <img src="https://lh3.googleusercontent.com/d/1QRSKuwmb2PxH0b4sTsne0Xv89yBujNDc" alt="Icon Merchant">
+          GALLERY
+        </a>
+      </div>
+    <h1>THE GIFTS</h1>
+    <h4>Click your name!</h4>
+    <div class="buttons">
+        <a class="button" href="https://drive.google.com/drive/folders/1RPeYxS6snLimrZW4VbLsY-2Z0CZSx8nb?usp=sharing">ABIYAN DIRGANTARA</a>
+        <a class="button" href="https://drive.google.com/drive/folders/16HVosXX7SGxO3xk1ipmUnSNPHHiJJsQ_?usp=sharing">ALTARAINE JOYCE SALVATORE</a>
+        <a class="button" href="https://drive.google.com/drive/folders/1E97Bh7SctK-tzmKtmco4IcmEGg7U6LxN?usp=sharing">ATALARIC KANIGARA</a>
+        <a class="button" href="https://drive.google.com/drive/folders/1OSvqx0K0gkbvzpX4fZECPD0-06YHMuy2?usp=sharing">BRUGUIERA EVANNIKO</a>
+        <a class="button" href="https://drive.google.com/drive/folders/1jAzUg6Ouhpr5nIPPlxhJq2FnYXIRdRb0?usp=sharing">CELESTA AUTUMN HAVEN</a>
+        <a class="button" href="https://drive.google.com/drive/folders/1yZeyoWkYpx17mTWYlCk25rlGXGt5RP9e?usp=sharing">CELESTE ABIGAIL HOLME</a>
+        <a class="button" href="https://drive.google.com/drive/folders/104IZ831z0qHmq_8980gf5ueYbbAfrZGf?usp=sharing">CLARETTA MEISIE</a>
+        <a class="button" href="https://drive.google.com/drive/folders/19p05ABsREOMW_2Z2jcJvoy87WtHL2yfG?usp=sharing">GAUTHIER IZAAK</a>
+        <a class="button" href="https://drive.google.com/drive/folders/1ATjLgnCKrzjevTIdXld4hjndkVwqxMZk?usp=sharing">HADAN JIMON P</a>
+        <a class="button" href="https://drive.google.com/drive/folders/1abGcrKhdhbUpCdL7pXrV48QNwkyVbtzE?usp=sharing">ALERIC REZVAN MILVERTON</a>
+        <a class="button" href="https://drive.google.com/drive/folders/1ReI4du_R0a6uIH1QwNRK3jCwvpraA9aA?usp=sharing">JANEALY KALEENA</a>
+        <a class="button" href="https://drive.google.com/drive/folders/1YbXngqstGohRlf-Fc2RS12Gn1YUeXf8e?usp=sharing">JEANO MALVIANO</a>
+        <a class="button" href="https://drive.google.com/drive/folders/1SjfdF5u8ymmsqN9HNNPiGC8MANvtsAV-?usp=sharing">JEMIMA KALANI</a>
+        <a class="button" href="https://drive.google.com/drive/folders/1Uw1tOjYijZJr7KwR_s1u17ogFgeN7B8U?usp=sharing">JODY BENNETT</a>
+        <a class="button" href="https://drive.google.com/drive/folders/1ZaP3Lz9anC-nCXxwMnbUG5t2Ixk8I_dH?usp=sharing">JONATHAN GABRIEL</a>
+        <a class="button" href="https://drive.google.com/drive/folders/1nlp9Oy5bOjnEDpheeHHlOJo4VUuU-meG?usp=sharing">LUCIAN RAHANDIKA</a>
+        <a class="button" href="https://drive.google.com/drive/folders/1g648jMSMaP-Xpvu6N4ZtOaMz7dscm4IF?usp=sharing">MAHARDIKA ASKARI</a>
+        <a class="button" href="https://drive.google.com/drive/folders/1dLJu9VZgnhDUJORH501vBaOAi0pw8Rw4?usp=sharing">MARVIN L. SALAZAR</a>
+        <a class="button" href="https://drive.google.com/drive/folders/1B47VllGHSvPVWBUUKX3J7ec8X1idmT9J?usp=sharing">KATARHEA YSABELLE</a>
+        <a class="button" href="https://drive.google.com/drive/folders/1Fkx0yuV3_FQV5P9D8-zFdW8hHHDxZUJ0?usp=sharing">NARAYAN</a>
+        <a class="button" href="https://drive.google.com/drive/folders/1v0BqozK76m4A-ZSw1w9QKmmCNDmCtbDJ?usp=sharing">REVANDRA THEODORE</a>
+        <a class="button" href="https://drive.google.com/drive/folders/16trrqsgywSPAWtY5RXi_5VlPzgk7UErp?usp=sharing">AICHI CHYE</a>
+        <a class="button" href="https://drive.google.com/drive/folders/1lbkkcy1DWQHT9hSk6tTQvyVtk7bVLCC8?usp=sharing">SEKALA RADITYA</a>
+        <a class="button" href="https://drive.google.com/drive/folders/1LRmYd4HwAiTgiEiWD0ElCDtQiFTNNA7s?usp=sharing">TAKANASHI RYOMA</a>
+        <a class="button" href="https://drive.google.com/drive/folders/1NA7-Zk4H48R-v2EWtzp9fQ0PuKg8gWe0?usp=sharing">ZHIA ALEEZA</a>
+    </div>
     <script>
-        function togglePopup(popupId, nameFoto) {
-            var popup = document.getElementById(popupId);
-            console.log(nameFoto);
-            var popupImage = popup.querySelector('#popupImage');
-            popupImage.src = "img/CERTIFICATE/" + nameFoto + '.png';
-            popup.classList.toggle('show');
+        function w3_open() {
+          document.getElementById("mySidebar").style.display = "block";
         }
-
-        function closePopup(popupId) {
-            var popup = document.getElementById(popupId);
-            popup.classList.remove('show');
+    
+        function w3_close() {
+          document.getElementById("mySidebar").style.display = "none";
         }
-    </script>
+      </script>
 </body>
