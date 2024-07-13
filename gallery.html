@@ -8,17 +8,51 @@
 	<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet"> <!-- https://fonts.google.com/ -->
 	<link href="css/magnific-popup.min.css" rel="stylesheet">
     <link href="css/tooplate-style.css" rel="stylesheet">
-<!--
+<style>
+	.container {
+      display: flex;
+      flex-wrap: wrap; /* Allows items to wrap to the next line */
+    }
+	.button-1 {
+    background-color: white;
+    border-radius: 8px;
+    border-style: none;
+    box-sizing: border-box;
+    color: #1E9DC9;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "SAO-TT-BOLD";
+    letter-spacing: 2px;
+    font-size: 14px;
+    font-weight: bold;
+    height: 40px;
+    line-height: 20px;
+    list-style: none;
+    margin: 0;
+    outline: none;
+    padding: 10px 16px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    transition: color 100ms;
+    vertical-align: baseline;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    margin: 0 auto; 
+    }
 
-Tooplate 2122 Nano Folio
-
-https://www.tooplate.com/view/2122-nano-folio
-
--->
+    .button-1:hover,
+    .button-1:focus {
+        color: white;
+        background-color: black;
+    }
+</style>
 </head>
 <body>
 	<div class="tm-container-fluid">
 		<div class="tm-gallery-section tm-mb-80">
+			<a class="button-1" href="./">BACK TO HOME</a>
 			<ul class="filters-button-group tm-mb-40">
 				<li><a href="#" data-filter=".event">Events</a></li>
 				<li><a href="#" data-filter=".celebrate">Celebration</a></li>
@@ -212,6 +246,13 @@ https://www.tooplate.com/view/2122-nano-folio
 				  gallery: { enabled: true }
 			});
 		});
+		function w3_open() {
+          document.getElementById("mySidebar").style.display = "block";
+        }
+    
+        function w3_close() {
+          document.getElementById("mySidebar").style.display = "none";
+        }
 	</script>
 </body>
 </html>

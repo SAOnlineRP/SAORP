@@ -10,6 +10,10 @@ https://www.tooplate.com/view/2122-nano-folio
     font-family: "SAO-TT";
     src: url("../sao-ui/SAOUITT-Regular.ttf");
 }
+@font-face {
+    font-family: "SAO-TT-BOLD";
+    src: url("../sao-ui/SAOUITT-Bold.ttf");
+}
 
 html { overflow-x: hidden; }
 

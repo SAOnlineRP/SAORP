@@ -42,7 +42,7 @@
 
 
     h1 {
-        padding:75px 0 30px 0;
+        padding: 40px 0 30px 0;
         text-align:center;
         line-height:30px;
         letter-spacing: 5px;
@@ -82,38 +82,50 @@
         }
         }
     } 
-    .w3-bar-item img {
-      max-width: 30px; /* Maximum width of the image */
-      max-height: 30px; /* Maximum height of the image */
-      vertical-align: middle; /* Align the image vertically within the anchor */
-      margin-right: 10px; /* Add spacing between the image and text */
+    .container{
+        margin-top: 60px;
+        display: flex;
+        justify-content: center;
+    }
+    .button-1 {
+    background-color: white;
+    border-radius: 8px;
+    border-style: none;
+    box-sizing: border-box;
+    color: #1E9DC9;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "SAO-TT-BOLD";
+    letter-spacing: 2px;
+    font-size: 14px;
+    font-weight: bold;
+    height: 40px;
+    line-height: 20px;
+    list-style: none;
+    margin: 0;
+    outline: none;
+    padding: 10px 16px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    transition: color 100ms;
+    vertical-align: baseline;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    margin: 0 auto; 
+    }
+
+    .button-1:hover,
+    .button-1:focus {
+        color: white;
+        background-color: black;
     }
 </style>
 <body>
-    <button class="w3-button w3-xlarge" style="background-color: rgb(233, 237, 246); position: fixed; z-index: 1;" onclick="w3_open()">☰</button>
-    <div class="w3-sidebar w3-bar-block w3-border-right" style="display:none; z-index: 2" id="mySidebar">
-        <button onclick="w3_close()" class="w3-bar-item w3-large">Close &times;</button>
-        <a href="./" class="w3-bar-item w3-button">
-          <img src="https://lh3.googleusercontent.com/d/1GX42FIIBDPQTVvGEj1PhJjleSnx46gp9" alt="Icon Profile">
-          HOME
-        </a>
-        <a href="./hall.html" class="w3-bar-item w3-button">
-          <img src="https://lh3.googleusercontent.com/d/1QRSKuwmb2PxH0b4sTsne0Xv89yBujNDc" alt="Icon Merchant">
-          HALL OF FAME
-        </a>
-        <a href="./gifts.html" class="w3-bar-item w3-button">
-          <img src="https://lh3.googleusercontent.com/d/1QRSKuwmb2PxH0b4sTsne0Xv89yBujNDc" alt="Icon Merchant">
-          THE GIFTS
-        </a>
-        <a href="./book3.html" class="w3-bar-item w3-button">
-          <img src="https://lh3.googleusercontent.com/d/1QRSKuwmb2PxH0b4sTsne0Xv89yBujNDc" alt="Icon Merchant">
-          PLOT STORIES
-        </a>
-        <a href="./gallery.html" class="w3-bar-item w3-button">
-          <img src="https://lh3.googleusercontent.com/d/1QRSKuwmb2PxH0b4sTsne0Xv89yBujNDc" alt="Icon Merchant">
-          GALLERY
-        </a>
-      </div>
+    <div class="container">
+        <a class="button-1" href="./">BACK TO HOME</a>
+    </div>
     <h1>THE GIFTS</h1>
     <h4>Click your name!</h4>
     <div class="buttons">
@@ -141,15 +153,6 @@
         <a class="button" href="https://drive.google.com/drive/folders/16trrqsgywSPAWtY5RXi_5VlPzgk7UErp?usp=sharing">AICHI CHYE</a>
         <a class="button" href="https://drive.google.com/drive/folders/1lbkkcy1DWQHT9hSk6tTQvyVtk7bVLCC8?usp=sharing">SEKALA RADITYA</a>
         <a class="button" href="https://drive.google.com/drive/folders/1LRmYd4HwAiTgiEiWD0ElCDtQiFTNNA7s?usp=sharing">TAKANASHI RYOMA</a>
-        <a class="button" href="https://drive.google.com/drive/folders/1NA7-Zk4H48R-v2EWtzp9fQ0PuKg8gWe0?usp=sharing">ZHIA ALEEZA</a>
+        <a class="button" href="https://drive.google.com/drive/folders/1NA7-Zk4H48R-v2EWtzp9fQ0PuKg8gWe0?usp=sharing" style="margin-bottom: 60px;">ZHIA ALEEZA</a>
     </div>
-    <script>
-        function w3_open() {
-          document.getElementById("mySidebar").style.display = "block";
-        }
-    
-        function w3_close() {
-          document.getElementById("mySidebar").style.display = "none";
-        }
-      </script>
 </body>

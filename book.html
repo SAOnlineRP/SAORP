@@ -1,344 +1,247 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Flip Card</title>
-    <!--Google Fonts and Icons-->
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Round|Material+Icons+Sharp|Material+Icons+Two+Tone"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Foldit:wght@100;200;300;400;500;600;700;800;900&display=swap"
-      rel="stylesheet"
-    />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flip Book - Samuel</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap" rel="stylesheet">
+</head>
+<style>
+    @import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=Petemoss&display=swap");
 
-    <style>
-      body {
+    @font-face {
+        font-family: "SAO-TT-BOLD";
+        src: url("sao-ui/SAOUITT-Bold.ttf");
+    }
+
+    * {
+        box-sizing: border-box;
+        font-family: "Cinzel", serif;
+    }
+
+    body {
         margin: 0;
         padding: 0;
-        width: 100%;
-        height: 100vh;
-      }
-      .center {
-        width: 100%;
-        height: 100%;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    p {
+        margin: 0;
+    }
+
+    main {
+        background-image: url('https://lh3.googleusercontent.com/d/1V1b-h2kvdDCSUHrmKkBdcKpoVzmvj7iz');
         display: flex;
-        align-items: center;
         justify-content: center;
-        flex-direction: column;
-      }
-      .book {
-        width: 400px;
-        height: 300px;
-        position: relative;
-      }
-      .pages {
-        width: 100%;
-        height: 100%;
-        position: relative;
-      }
-      .page {
-        width: 380px;
-        height: 270px;
-        position: absolute;
-        top: 0;
-        left: 0;
-        border-radius: 7mm;
-        margin: 0 6px;
-        transform-style: preserve-3d;
+        background-color: #d9d9d9;
+    }
+
+    .book {
+        --book-height: 100vh;
+        --book-ratio: 1.4;
+    }
+
+    .book > div {
+        height: var(--book-height);
+        width: calc(var(--book-height) / var(--book-ratio));
+        overflow: auto;
+        background-color: #0a0a0a;
+        transform: scale(0.9);
+        border-radius: 6px;
         transform-origin: left;
-        transition: 0.25s;
-        box-shadow: 1px 2px 0 0 rgba(0, 0, 0, 0.15),
-          1px 3px 1px 0 rgba(0, 0, 0, 0.1);
-      }
-      .page-side {
-        width: 100%;
-        height: 100%;
-        box-sizing: border-box;
-        padding: 20px 30px;
+    }
+
+    .book-cover {
         display: flex;
-        align-items: flex-start;
         justify-content: center;
-        flex-direction: column;
-        font-family: poppins;
-        border-radius: 7mm;
+        align-items: center;
         position: absolute;
-        top: 0;
-        left: 0;
-        backface-visibility: hidden;
-      }
-      .page-head {
-        width: 100%;
-      }
-      .page-title {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        font-size: 40px;
-        font-weight: 500;
-      }
-      .page-subtitle {
-        font-size: 12px;
-        font-weight: 300;
-      }
-      .page-content {
-        flex-grow: 1;
-        font-size: 14px;
-        display: flex;
-        align-items: flex-end;
-      }
-      .page-footer {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin-top: 15px;
-        font-size: 14px;
-      }
-      .pg-no {
-        width: 14px;
-        padding: 0 15px;
-        height: 20px;
-        line-height: 20px;
+        z-index: 9;
         text-align: center;
-        color: rgb(40, 40, 40);
-        background: white;
-        border-radius: 3mm;
-      }
-      .front {
-        background: rgb(255, 228, 130);
-        color: rgb(40, 40, 40);
-        padding-left: 40px;
-      }
-      .back {
-        background: rgb(40, 40, 40);
+        background: linear-gradient(135deg, black 25%, transparent 25%) -50px 0,
+            linear-gradient(225deg, black 25%, transparent 25%) -50px 0,
+            linear-gradient(315deg, black 25%, transparent 25%),
+            linear-gradient(45deg, black 25%, transparent 25%);
+        background-size: 2em 2em;
+        background-color: #232323;
         color: white;
-        padding-right: 40px;
-        transform: rotateY(180deg);
-      }
-      .beads {
+        transition: transform 2s;
+    }
+
+    .book-cover::before {
+        content: "";
         position: absolute;
+        width: 20px;
+        right: 20px;
         top: 0;
-        left: -12px;
-        height: 270px;
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
-        flex-direction: column;
-        z-index: 9999;
-      }
-      .bead {
-        width: 36px;
-        height: 12px;
-        background: white;
-        border-radius: 5mm;
-        z-index: 9999;
-        box-shadow: inset 1px 2px 0 0 rgba(0, 0, 0, 0.15),
-          inset 1px 3px 1px 0 rgba(0, 0, 0, 0.1);
-      }
-      .controls {
-        width: 350px;
-        height: fit-content;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-      }
-      .controls button {
-        background: white;
-        width: 40px;
-        height: 40px;
-        border: 0.4mm solid rgb(40, 40, 40);
+        bottom: 0;
+        background-color: #b11509;
+    }
+
+    h1 {
+        font-family: "SAO-TT-BOLD", cursive;
+        font-size: 98px;
+        font-weight: 300;
+        color: #dbd75d;
+    }
+
+    h2 {
+        font-size: 16px;
+    }
+
+    .separator {
+        --separator-size: 8px;
+        width: var(--separator-size);
+        height: var(--separator-size);
+        background-color: #dbd75d;
+        margin: 50px auto 60px auto;
         border-radius: 50%;
-        outline: none;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="center">
-      <div class="book">
-        <div class="pages">
-          <div class="beads">
-            <div class="bead"></div>
-            <div class="bead"></div>
-            <div class="bead"></div>
-            <div class="bead"></div>
-          </div>
+        position: relative;
+    }
 
-          <div class="page active">
-            <div class="page-side front">
-              <div class="page-head">
-                <div class="page-title">
-                  Sports
-                  <span class="material-icons-outlined">sports_soccer</span>
-                </div>
-                <div class="page-subtitle">Client Name</div>
-              </div>
-              <div class="page-content">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Necessitatibus iusto adipisci ad nobis omnis ipsam, porro
-                aperiam exercitationem eum quas sint facilis nihil possimus qui?
-              </div>
-              <div class="page-footer">
-                <span>May 2023</span>
-                <span class="pg-no">1</span>
-              </div>
-            </div>
+    .separator::after,
+    .separator::before {
+        content: "";
+        position: absolute;
+        width: 12px;
+        background-color: white;
+        height: 2px;
+        top: calc(50% - 1px);
+    }
 
-            <div class="page-side back">
-              <div class="page-head">
-                <div class="page-title">
-                  Movies
-                  <span class="material-icons-outlined">theaters</span>
+    .separator::after {
+        left: 15px;
+    }
+
+    .separator::before {
+        right: 15px;
+    }
+
+    .book-content {
+        display: flex; /* Use flexbox */
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items horizontally */
+        justify-content: center; /* Center items vertically */
+        transform: scale(0.9) translateY(30px);
+        background-color: white !important;
+        transition: all 0.3s 1s;
+        text-align: center; /* Center text content horizontally */
+        height: calc(100% - 60px); /* Adjust height as needed */
+    }
+
+    .book-content ul {
+    margin: 0 auto; /* Center the <ul> horizontally */
+    padding-left: 0; /* Remove default padding */
+    list-style: none; /* Remove default list styling */
+    }
+
+    .book-content h2 {
+        margin-bottom: 20px; /* Add space below <h2> for better separation */
+    }
+
+    .book-content li {
+        margin-bottom: 10px; /* Adjust spacing between list items */
+    }
+
+    .book-content h3,
+    .book-content p {
+        opacity: 0;
+        transition: all 0.3s 0.3s;
+    }
+
+    h3 {
+        padding: 30px;
+    }
+
+    p {
+        padding: 0px 30px 10px 30px;
+        text-align: justify;
+        font-size: 14px;
+    }
+
+    .book-cover > div {
+        transition: opacity 0s 0.6s;
+    }
+
+    .book:hover > .book-cover {
+        transform: rotateY(180deg) scale(0.9);
+    }
+
+    .book:hover > .book-cover > div {
+        opacity: 0;
+    }
+
+    .book:hover > .book-content {
+        transform: scale(0.9) translateY(0px);
+    }
+
+    .book:hover > .book-content h3,
+    .book:hover > .book-content p {
+        opacity: 1;
+    }
+
+    /* Responsive adjustments */
+    @media only screen and (max-width: 768px) {
+        .book > div {
+            width: 90%; /* Adjust width for smaller screens */
+            transform: scale(0.7); /* Scale down for smaller screens */
+        }
+
+        .book-content {
+            transform: scale(0.7) translateY(0); /* Adjust scale and transform for smaller screens */
+        }
+    }
+
+    @media only screen and (max-width: 480px) {
+        .book {
+            --book-height: 80vh; /* Adjust book height for smaller screens */
+            --book-ratio: 1.2; /* Adjust ratio for smaller screens */
+        }
+
+        .book > div {
+            width: 95%; /* Adjust width for very small screens */
+            transform: scale(0.6); /* Scale down more for very small screens */
+        }
+
+        .book-content {
+            transform: scale(0.6) translateY(0); /* Adjust scale and transform for very small screens */
+        }
+
+        h1 {
+            font-size: 72px; /* Decrease font size for smaller screens */
+        }
+    }
+
+</style>
+<body>
+    <main>
+        <div class="book">
+            <div class="book-cover">
+                <div>
+                    <h1>theSAOnline PLOTS</h1>
+                    <div class="separator"></div>
+                    <h2>by ALL PLAYERS</h2>
                 </div>
-                <div class="page-subtitle">Client Name</div>
-              </div>
-              <div class="page-content">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Necessitatibus iusto adipisci ad nobis omnis ipsam, porro
-                aperiam exercitationem eum quas sint facilis nihil possimus qui?
-              </div>
-              <div class="page-footer">
-                <span>May 2023</span>
-                <span class="pg-no">2</span>
-              </div>
             </div>
-          </div>
-          <div class="page">
-            <div class="page-side front">
-              <div class="page-head">
-                <div class="page-title">
-                  Music
-                  <span class="material-icons-outlined"> music_note </span>
+            <div class="book-content" style="color: black !important">
+                <h2>List Plot : </h2>
+                <ul>
+                    <li><a href="./book1.html">GU1LD</a></li>
+                    <li><a href="./book2.html">Ignited Souls</a></li>
+                    <li><a href="./book3.html">BEAT3R</a></li>
+                    <li><a href="./book4.html">4-SIX</a></li>
+                    <li><a href="./book5.html">5ASAAP</a></li>
+                </ul>
+
+                <div class="container">
+                    <a class="button-1" href="./">BACK TO HOME</a>
                 </div>
-                <div class="page-subtitle">Client Name</div>
-              </div>
-              <div class="page-content">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
-                modi temporibus tempora eligendi consectetur harum recusandae
-                rem exercitationem molestias? Dolorum itaque ducimus quam odio
-                unde
-              </div>
-              <div class="page-footer">
-                <span>May 2023</span>
-                <span class="pg-no">3</span>
-              </div>
             </div>
-            <div class="page-side back">
-              <div class="page-head">
-                <div class="page-title">
-                  Games
-                  <span class="material-icons-outlined"> sports_esports </span>
-                </div>
-                <div class="page-subtitle">Client Name</div>
-              </div>
-              <div class="page-content">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
-                modi temporibus tempora eligendi consectetur harum recusandae
-                rem exercitationem molestias? Dolorum itaque ducimus quam odio
-                unde
-              </div>
-              <div class="page-footer">
-                <span>May 2023</span>
-                <span class="pg-no">4</span>
-              </div>
-            </div>
-          </div>
-          <div class="page">
-            <div class="page-side front">
-              <div class="page-head">
-                <div class="page-title">
-                  News
-                  <span class="material-icons-outlined"> feed </span>
-                </div>
-                <div class="page-subtitle">Client Name</div>
-              </div>
-              <div class="page-content">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
-                modi temporibus tempora eligendi consectetur harum recusandae
-                rem exercitationem molestias? Dolorum itaque ducimus quam odio
-                unde
-              </div>
-              <div class="page-footer">
-                <span>May 2023</span>
-                <span class="pg-no">5</span>
-              </div>
-            </div>
-            <div class="page-side back">
-              <div class="page-head">
-                <div class="page-title">
-                  Education
-                  <span class="material-icons-outlined"> school </span>
-                </div>
-                <div class="page-subtitle">Client Name</div>
-              </div>
-              <div class="page-content">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
-                modi temporibus tempora eligendi consectetur harum recusandae
-                rem exercitationem molestias? Dolorum itaque ducimus quam odio
-                unde
-              </div>
-              <div class="page-footer">
-                <span>May 2023</span>
-                <span class="pg-no">6</span>
-              </div>
-            </div>
-          </div>
-          <div class="page"></div>
         </div>
-      </div>
-      <div class="controls">
-        <button type="button" class="btn" onclick="previous()">
-          <span class="material-icons-outlined">arrow_back</span>
-        </button>
-        <button type="button" class="btn" onclick="next()">
-          <span class="material-icons-outlined">arrow_forward</span>
-        </button>
-      </div>
-    </div>
-    <script>
-      function setIndex() {
-        let pages = document.querySelectorAll(".page");
-        for (var i = 0; i < pages.length; i++) {
-          pages[i].style.zIndex = pages.length - i;
-        }
-      }
-
-      setIndex();
-
-      function previous() {
-        let active = document.querySelector(".active");
-        let prevSib = active.previousElementSibling;
-        active.className = "page";
-        prevSib.className = "page active";
-        setIndex();
-        prevSib.style.transform = "rotateY(0deg)";
-        let prevSib2 = prevSib.previousElementSibling;
-        if (prevSib2 && prevSib2.className == "page") {
-          prevSib2.style.zIndex = "9998";
-        }
-      }
-
-      function next() {
-        let active = document.querySelector(".active");
-        let nextSib = active.nextElementSibling;
-        active.style.transform = "rotateY(180deg)";
-        active.className = "page";
-        setIndex();
-        active.style.zIndex = "9998";
-        if (nextSib) {
-          nextSib.className = "page active";
-        }
-      }
-    </script>
-  </body>
+    </main>
+</body>
 </html>

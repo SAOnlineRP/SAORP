@@ -31,6 +31,8 @@
     p {
         line-height: 30px;
         text-align: justify;
+        padding-top: 10px;
+        padding-bottom: 10px;
     }
     p > span {
         font-weight: 400;
@@ -48,7 +50,6 @@
     h2,
     h3 {
         font-family: "Quando", serif;
-        line-height: 1rem;
         color: var(--brown);
     }
 
@@ -73,83 +74,33 @@
         max-width: 800px;
         padding: 1em;
         font-size: 18px;
-        display: grid;
-        grid-template-columns: 30% 1fr 30%;
-        grid-auto-rows: min-content;
-        gap: 1.5em;
         position: relative;
         z-index: 1;
     }
     .page h1 {
         font-size: 3rem;
         margin: 1em 0 0.1em;
-        grid-column: 2/4;
         justify-self: end;
     }
     .page h2 {
         font-size: 1.4rem;
-        grid-column: 2/4;
         justify-self: end;
     }
     .page h3 {
         font-weight: normal;
         margin: 2em 0 3em;
         font-size: 1rem;
-        grid-column: 2/4;
         justify-self: end;
     }
 
-    .page p:nth-of-type(1) {
-        grid-column: 1/3;
-    }
-
-    .page p:nth-of-type(2) {
-        grid-column: 1/3;
-    }
-    .page p:nth-of-type(2)::first-letter {
-        font-size: 5rem;
-        float: left;
-    }
-
-    .page p:nth-of-type(3) {
-        grid-column: 1/3;
-    }
-
-    .page p:nth-of-type(4) {
-        grid-column: 1/3;
-    }
-
-    .page p:nth-of-type(5),
-    .page p:nth-of-type(6) {
-        grid-column: 1/4;
-        column-count: 2;
-        column-gap: 1.5em;
-        padding: 20px 10px;
-        border-top: 1px dotted var(--brown);
-    }
-
-    .page p:nth-of-type(7),
-    .page p:nth-of-type(8) {
-        grid-column: 1/4;
-    }
-
-    @media screen and (max-width: 640px) {
-        .page {
-            grid-template-columns: 1fr;
-        }
-        .page h1 {
-            font-size: 2rem;
-        }
-        .page h2 {
-            font-size: 1.2rem;
-        }
-        .page p {
-            grid-column: 1/4 !important;
-        }
-        .page p:nth-of-type(5),
-        .page p:nth-of-type(6) {
-            column-count: unset;
-        }
+    .back-link {
+        position: fixed;
+        top: 20px; /* Adjust the top distance as needed */
+        left: 20px; /* Adjust the left distance as needed */
+        background-color: #ffffff; /* Optional: Set background color for better visibility */
+        padding: 10px;
+        border-radius: 5px;
+        z-index: 1000; /* Ensure it's above other content if necessary */
     }
 
 </style>
@@ -158,41 +109,70 @@
         <img src="https://www.sicontis.com/codepen/cpc-book-text/flowers.png" alt="flowers background">
     </div>
     <div class="page">
+
+        <a href="./book.html"  class="back-link">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                <path fill="currentColor" d="M6.5 3L2 7.5l4.5 4.5V9h7V7H6.5V3z"/>
+            </svg>
+            Back to List Plot
+        </a>
     
-        <h1>Mrs. Dalloway</h1>
-        <h2>by Virginia Woolf</h2>
-    
-        <h3>An Excerpt from Chapter One</h3>
-    
-        <p>Mrs. Dalloway said she would buy the flowers herself.</p>
-    
-        <p>For Lucy had her work cut out for her. The doors would be taken off their hinges; Rumpelmayer's men were coming. And then, thought Clarissa Dalloway, what a morning fresh as if issued to children on a beach.</p>
-    
-        <p>What a lark! What a plunge! For so it had always seemed to her, when, with a little squeak of the hinges, which she could hear now, she had burst open the French windows and plunged at Bourton into the open air. How fresh, how calm, stiller than this of course, the air was in the early morning; like the flap of a wave; the kiss of a wave; chill and sharp and yet (for a girl of eighteen as she then was) solemn, feeling as she did, standing there at the open window, that something awful was about to happen; looking at the flowers, at the trees with the smoke winding off them and the rooks rising, falling; standing and looking until Peter Walsh said,
-            <span>
-                "Musing among the vegetables?" was that it? "I prefer men to cauliflowers" was that it?
-            </span>
-            He must have said it at breakfast one morning when she had gone out on to the terrace Peter Walsh. He would be back from India one of these days, June or July, she forgot which, for his letters were awfully dull; it was his sayings one remembered; his eyes, his pocket-knife, his smile, his grumpiness and, when millions of things had utterly vanished how strange it was! a few sayings like this about cabbages.
-        </p>
-    
-        <p>She stiffened a little on the kerb, waiting for Durtnall's van to pass. A charming woman, Scrope Purvis thought her (knowing her as one does know people who live next door to one in Westminster); a touch of the bird about her, of the jay, blue-green, light, vivacious, though she was over fifty, and grown very white since her illness. There she perched, never seeing him, waiting to cross, very upright.</p>
-    
-        <p>
-            <strong>For having lived in Westminster how many years now? over twenty, one feels even in the midst of the traffic, or waking at night,
-            </strong>
-            Clarissa was positive, a particular hush, or solemnity; an indescribable pause; a suspense (but that might be her heart, affected, they said, by influenza) before Big Ben strikes. There! Out it boomed. First a warning, musical; then the hour, irrevocable. The leaden circles dissolved in the air. Such fools we are, she thought, crossing Victoria Street. For Heaven only knows why one loves it so, how one sees it so, making it up, building it round one, tumbling it, creating it every moment afresh; but the veriest frumps, the most dejected of miseries sitting on doorsteps (drink their downfall) do the same; can't be dealt with, she felt positive, by Acts of Parliament for that very reason: they love life. In people's eyes, in the swing, tramp, and trudge; in the bellow and the uproar; the carriages, motor cars, omnibuses, vans, sandwich men shuffling and swinging; brass bands; barrel organs; in the triumph and the jingle and the strange high singing of some aeroplane overhead was what she loved; life; London; this moment of June.
-        </p>
-    
-        <p>
-            <strong>
-                For it was the middle of June. The War was over, except for some one like Mrs. Foxcroft at the Embassy last night eating her heart out
-            </strong>
-            because that nice boy was killed and now the old Manor House must go to a cousin; or Lady Bexborough who opened a bazaar, they said, with the telegram in her hand, John, her favourite, killed; but it was over; thank Heaven over. It was June. The King and Queen were at the Palace. And everywhere, though it was still so early, there was a beating, a stirring of galloping ponies, tapping of cricket bats; Lords, Ascot, Ranelagh and all the rest of it; wrapped in the soft mesh of the grey-blue morning air, which, as the day wore on, would unwind them, and set down on their lawns and pitches the bouncing ponies, whose forefeet just struck the ground and up they sprung, the whirling young men, and laughing girls in their transparent muslins who, even now, after dancing all night, were taking their absurd woolly dogs for a run; and even now, at this hour, discreet old dowagers were shooting out in their motor cars on errands of mystery; and the shopkeepers were fidgeting in their windows with their paste and diamonds, their lovely old sea-green brooches in eighteenth-century settings to tempt Americans (but one must economise, not buy things rashly for Elizabeth), and she, too, loving it as she did with an absurd and faithful passion, being part of it, since her people were courtiers once in the time of the Georges, she, too, was going that very night to kindle and illuminate; to give her party. But how strange, on entering the Park, the silence; the mist; the hum; the slow-swimming happy ducks; the pouched birds waddling; and who should be coming along with his back against the Government buildings, most appropriately, carrying a despatch box stamped with the Royal Arms, who but Hugh Whitbread; her old friend Hugh the admirable Hugh!
-        </p>
-    
-        <p><span>"Good-morning to you, Clarissa!" said Hugh, rather extravagantly, for they had known each other as children. "Where are you off to?"</span></p>
-    
-        <p><span>"I love walking in London," said Mrs. Dalloway. "Really it's better than walking in the country."</span></p>
+        <h1>PLOT STORY</h1>
+        <h2>by GUILD : Ignited Souls</h2>
+        <br>
+        <p>Jane, Ode dan Askari menatap nanar tanah kosong dimana rekan guildnya kalah dalam melawan bos. Matanya tertutup dan mengambil nafas berat, Jane lalu berkata kepada rekannya yang tersisa. "Ayo jalan, perjuangan kita masih panjang. Jangan sia siain perjuangan mereka." perintahnya. Setelah itu mereka melanjutkan perjalanan lagi, Jane berpikir bahwa Ia masih kurang dalam kemampuannya sehingga ada 3 anggota yang gugur. "apa yang harus gue lakuin lagi... anggota guild tinggal sisa bertiga, emang bakalan kuat lawan bos lain lagi nanti?" Gumamnya pelan. Melihat Askari yang sepertinya mulai lelah, Jane memutuskan untuk beristirahat sebentar. "istirahat dulu yuk, disitu tuh." tunjuknya pada sebuah pohon yang rindang. Askari lalu mengangguk semangat lalu berjalan lebih dulu. Sepertinya Niko memiliki pemikiran lain, Ia hanya diam ketika Jane mengajaknya beristirahat. Setelah berbicara sebentar, jelaslah bahwa Niko ingin pergi berburu karna lapar dan belum merasakan lelah. Jane menganggukan kepalanya, "tapi hati hati ye, tar gabisa pulang." Canda Jane. Setelah Niko pergi, Jane lalu menyusul Askari untuk beristirahat. Sambil memejamkan matanya, Jane menikmati suasana dan udara yang tidak mungkin dunia nyata ini miliki. Setelah itu Jane dan Askari melanjutkan perjalanannya lagi. Sialnya saat Jane dan Askari sedang melanjutkan perjalanan, mereka bertemu dengan monster yang ukurannya lumayan besar dan jumlahnya sangat banyak. </p>
+
+        <p>Mata Jane terpejam melihat monster tersebut, "ah elahh, jangan lagii, capek jir." Batinnya berteriak. Jane dan Askari mulai melawan monster-monster jelek tersebut dengan semua kemampuannya, apalagi mereka hanya berdua. Hal ini akan sulit bagi mereka karena jumlah kekuatan yang tidak imbang. Ditengah keputusasaan dalam menghadapi monster tersebut, muncul seseorang yang membantu mereka untuk melawan monster itu. Kini kekuatan mereka mulai imbang dan tidak lagi kekurangan kekuatan. Dengan bantuan orang asing tersebut, Jane dan Askari selamat dari kekalahan karna kurangnya jumlah kekuatan yang mereka punya. Dengan nafas yang terengah-engah Jane tersenyum kepada orang asing di hadapannya itu, "makasii banyakk, kalo nggak ada lo kayaknya gue sama dia gak bakal selamat dan langsung, krekk." Kekeh Jane. "oh iya nama gue Jane dan dia Askari, lo kenapa ada disini sendirian? Nggak takut emangnya ketemu monster kayak tadi gitu?" Tanya Jane pada orang asing dihadapannya. "Fiuhh.." helaan nafas keluar dari mulutnya sembari ia menyeka keringat yang bercucuran di keningnya "hai jane, askari, kalau gue esar si pengembara lonely..." ucap pemuda itu sambil berjabat tangan dengan kedua orang yang baru saja iya tolong barusan. "Gue udah biasa ketemu monster seperti itu" sambungnya sambil berjalan kearah pohon "kalian kenapa bisa sampai ke sini? Kalian cuman ber2 saja?" Tambahnya lagi sambil mendudukan dirinya di bawah pohon rindang yang tak jauh dari tempat kedua orang itu berdiri.</p>
+
+        <p>Jane menganggukan kepalanya mengerti, Ia mengikuti Esar menuju pohon rindang tersebut. "daripada sendirian mau gabung ke guild gue aja nggak? Kan kalo lebih rame bisa jadi lebih kuat kitanya." Ajak Jane pada Esar. Pemuda itu berfikir sejenak mempertimbangkan ajakan dari wanita tersebut, jane "hmm... ide yang bagus, gue juga lelah kalau harus jadi solo player di sini" ucapnya kepada jane, bembari mengeluarkan sandwich dari inventorynya."Kalian cuman berdua atau ada rekan kalian yang lain?" Sambungnya bertanya kepada mereka berdua. "oh iya lupa banget jawab yang itu, ada satu orang lagi. Katanya dia belum capek terus lagi laper. Makanya lagi pergi berburu, gatau deh kapan dia balik. Tapi dia tau kok tujuan kita mau kemana, jadi pasti dia nyusul." Jawab Jane. "Lanjut jalan yuk? Kita cari penginapan sekalian buat istirahat." Lanjut Jane pada Esar dan Askari. Wusss~ sandwich yang berada di tangan pemuda itu hilang begitu saja. "Oh jadi kalian ada ber3 ya" ucap pemuda itu sambil berdiri dari duduknya, "ayo, gue sedikit lelah habis bertempur tadi" ucapnya sambil sedikit membersihkan bajunya. "Oiya, di dekat sini ada penginapan yang bagus, ada kamar mandinya juga" imbuhnya lagi, sambil berjalan beriringan dengan jane dan aska, rekan guild barunya. Setelah beberapa menit mereka berjalan, tak terasa mereka telah sampai di depan penginapan yang di maksud oleh Esar. Mereka ber3 berjalan masuk kepenginapan tersebut dan menyewa 2 kamar untuk mereka tempati beberapa waktu kedepan. "Ini kunci kamar lu, jane" ucap esar sambil memberikan sebuah kunci kepada jane, "gue bareng aska di sini, di sebelah lu, kita instirahag dulu sambil nungguin temen lu yang satunya lagi" tambahnya kemudian kedua pemuda itu, esar dan aska memasuki kamarnya dan beristirahat. "Okeee, makasih kakk." Jane mengambil kunci dari tangan Esar. Lalu Ia pergi menuju kamarnya untuk merebahkan badannya dan beristirahat. </p>
+
+        <p>Jane menatap atap kamar yang sedang Ia gunakan, pikirannya berlari-lari memikirkan beberapa hal yang terjadi di hidupnya "andai aja gue nggak nekat main game kayaknya gue nggak bakal terjebak kayak gini wkwkwk." Monolog Jane. Matanya kemudian beralih menatap isi kamar yang lumayan bagus menurut ukurannya. Jane tersenyum kecil, yahh lagipula selama tidak bertemu bos Ia akan aman disini. </p>
+
+        <p>Pasar di pagi hari akan selalu jadi tempat tuju Jemima tiap kali hari berganti, tentu saja untuk menguping informasi dari beberapa pemain yang sering bolak-balik lantai. Meskipun sebenarnya informasi seperti itu akan selalu masuk ke kotak pesannya. Namun bagaimanapun kegiatan menguping dan bergosip secara langsung terasa amat beda. Seperti saat ini, dia sengaja ikut masuk kedalam kedai makan dan memesan minuman hangat hanya untuk mendengarkan sekelompok pemain yang sedang bercengkrama. Tidak jauh obrolannya dari lantai sekian dan apa jenis bos yang mendiami tiap lantai tersebut, 'huh itu sih sudah ada infonya, tck'.</p>
+
+        <p>Merasa mulai bosan dengan percakapan kurang gosip sekelompok pemuda itu, dia hendak beranjak. Tapi tiba-tiba seorang bergabung dengan mereka dan mengatakan bahwa baru-baru ini ada sebuah guild yang hampir terbantai habis. Kalimat itu membuat telinganya kini seolah bergerak, siap untuk menyerap semua informasi. Oh ternyata ada sebuah guild yang langsung kehilangan tiga orangnya saat melawan boss. "Kasihan sekali mereka, wah bisa diincar yellow player nantinya." dia bergumam sendiri dengan wajah sedikit murung. Merasa bersimpati karena dia pun mengalami hal yang sama sebelum ini, kehilangan anggota guild dan sisanya bubar. </p>
+
+        <p>Pemain berpakaian serba coklat itu menghela nafas dan beranjak pergi, kali ini benar-benar pergi dan tanpa tujuan. Dalam perjalan tanpa arahnya, dia kembali teringat akan mimpi buruk yang mengurung beribu orang di dunia game yang dia masuki. Dimana saat itu sosok Game Master muncul  mengatur ulang sistem yang mengakibatkan para pemain tidak bisa logout dan harus memenangkan tantangan tiap lantainya.</p>
+
+        <p>"Kayaba Akihiko itu gila!" Ujarnya kesal sembari menendang kerikil di jalan setapak. Tidak perduli jika kerikil itu mengenai hewan-hewan kecil yang kebetulan sedang merumpi di tepi jalan dan membuat mereka bubar. Melihat hewan-hewan kecil berkelompok itu membuatnya bergumam. "Apa ini pertanda untuk berhenti mengeluh dan mulai mempertimbangkan untuk bergabung dengan guild ya?" dia bertanya sendiri. Teringat olehnya ujaran seorang yang dia perkirakan mungkin seorang 𝙗𝙚𝙖𝙩𝙚𝙧. 𝙗𝙚𝙖𝙩𝙚𝙧 itu menyarakan kan para pemain untuk mulai memperkuat skill dan membangun atau bergabung dengan sebuah guild. Karena tentu saja tidak ada solo player yang mungkin akan selamat melawan boss di tiap lantai.  Saat itu Jemima juga ditawari dan bergabung kedalam sebuah guild, tapi naas saat menghadapi boss lantai 18 hanya dia  dua orang lain yang berhasil kabur. Mengingat itu jujur membuatnya tidak percaya sama sekali bahwa mungkin mereka bisa kembali ke dunia sebenarnya.Tapi kondisi seolah menuntutnya untuk bangkit jika tidak ingin terkurung disini selamanya. </p>
+
+        <p>"Ha~ Kali ini harus benar-benar serius..." dia menepuk dadanya sendiri, untuk meyakinkan diri mungkin sudah saatnya bergabung dengan sebuah guild. Dengan motivasi itu, pemain muda itu berbalik arah dan berlari menuju rumah tumpang milik seorang  berusia empat puluh yang memilih hidup sebagai tukang kayu. Dia sudah bertekat untuk  mengembara ke setiap lantai guna menaikkan level dan skill yang dia punya. Mengantongi kalimat penuh semangat dari seseorang yang sudah di anggap paman, Jemima pergi. Diiringi semburat jingga di langit sore itu, dia bersiul-siul dengan santai sembari mencari penginapan untuk di tinggali malam ini. Pagi berikutnya tiba, tidak ada yang berubah dari kebiasaan pagi untuk mencari keramaian & menguping informasi. Sambil memakan sandwich dia memperhatikan beberapa orang saling mengundang & membentuk sebuah guild. Sempat berkeinginan untuk menawarkan diri, tapi dia tidak pede. Rasa laparnya saat itu mendadak menguap dan hilang terbawa angin. Perguild ini membuatnya galau gundah merana padahal sudah berusaha move on. Jadi dengan helaan nafas berat dia tinggalkan sandwich itu sembarangan dan pergi untuk mencari area terbuka yang luas. Mungkin pergi berburu bisa membuat suasana hatinya jadi lebih baik, untung untung dapat item kelas s yang bisa di jual mahal.</p>
+
+        <p>Healing-perburuannya berlangsung beberapa jam hingga tengah hari tiba, saat itu dia kembali menuju pusat keramaian sambil terkekeh penuh maksud. "Baiklah saatnya berdagang." Dia memindahkan sebuah meja & naik ke atasnya sambil memegang sebuah kertas bertuliskan 'ada 𝙍𝙖𝙜𝙤𝙪𝙩 𝙍𝙖𝙗𝙗𝙞𝙩'𝙨 𝙈𝙚𝙖𝙩 hanya 50.000 COL.' diikuti dengan suara menjajakan yang super nyaring hingga menarik perhatian beberapa pemain lain. 'Ya iyalah, ini loh item rare kelas S masa kalian tidak tertarik.' batinnya bersorak ria melihat satu persatu mulai berdatangan dan mulai menawar untuk sebuah item hasil berburunya itu. </p>
+
+        <p>Untuk beberapa saat Askari hanya bisa termenung sambil menatap ke arah langit-langit penginapan tempatnya kini berada. Di sela-sela lamunan yang sedang menguasai dirinya, Askari melirik ke arah seseorang yang ada di sampingnya saat ini, Esar.Orang asing yang secara tiba-tiba datang dari antah-berantah itu menyelamatkan dirinya dan Jane dari serangan monster jelek. Entah bagaimana ceritanya pertemuan singkat itu akhirnya membawa mereka semua ke dalam penginapan ini bersama-sama. Mengingat seluruh runtutan peristiwa yang Askari alami bersama dengan guildnya membuat kepalanya sedikit pening. Dalam lamunannya dia selipkan rutukan untuk dirinya sendiri karena merasa gagal untuk menjaga teman-temannya agar bisa tetep bersama sampai akhir. "Ah sial" Satu rutukan singkat akhirnya lolos juga dari mulut Askari dengan suaranya yang rendah dan hampir terdengar hanya seperti gumaman itu. Askari memijat keningnya dengan perlahan, berusaha menghilangkan sedikit rasa pening yang sangat menggangunya. Bukannya semakin menghilang, rasa pening di kepalanya justru semakin menjadi-jadi. Alih-alih memilih untuk beristirahat dan mengisi energinya agar cepat pulih, Askari memilih untuk diam-diam keluar dari penginapan. Askari berencana akan berjalan-jalan sedikit untum melihat keadaan di sekitarnya sambil memulihkan pikirannya dengan menghirup udara segar. </p>
+
+        <p> "Sepertinya berjalan-jalan sedikit adalah pilihan yang tepat untuk saat-saat seperti saat ini" katanya dalam hati. Di depan penginapan Askari melihat ke sekelilingnya, mencoba mengingat-ingat di mana tempatnya berdiri agar nanti tidak tersesat saat akan kembali. Askari langsung saja berjalan mengikuti pergerakan orang-orang yang tampaknya akan menuju ke satu arah. Semakin langkahnya bertambah, semakin ramai dia melihat orang berlalu lalang ke sana dan ke mari. Sejujurnya Askari masih merasa asing dengan tempatnya berada saat ini. Biasanya dia hanya mengikuti teman-teman satu guildnya kemana akan pergi tanpa banyak berbicara. Berjalan sendirian di tengah keramaian seperti ini membuat Askari merasa sedikit khawatir tidak bisa kembali pulang pada teman-temannya. Untuk sesaat Askari menahan langkahnya. Dia memperhatikan seluruh sudut yang ada di hadapannya,  sepertinya ini lah pusat keramaian tempat semua orang berkumpul. Askari melihat banyak pemain yang sedang berbincang-bincang riang dan sebagian lagi banyak yang sedang mendagangkan hasil perburuannya. Askari melanjutkan perjalannya sambil melihat-lihat apa saja yang orang-orang perdagangkan di sana. Langkahnya tiba-tiba terhenti saat mendengar suara nyaring yang sedang menawarkan dagangannya. Tawarannya terdengar sangat menarik hingga dia tidak bisa menahan dirinya untuk tidak mendekati sumber suara yang mendistraksinya. Di sana tertulis Ragout Rabbit's Meat, dia menjuai item rare kelas S yang selama ini dicari-cari oleh semua orang. Tidak heran kalau pengunjung di sana terlihat berbondong-bondong untuk menghampirinya. Melihat harganya saja sudah langsung membuat nyali Askari menciut bahkan untuk sekedar melangkah lebih dekat lagi. Askari mana punya COL sebanyak itu, terlalu miskin dia di dunia ini. Semakin ramai orang-orang ingin melihat item rare yang sedang dijual itu,  semakin jauh juga jarak Askari dengan tempat yang mendadak ramai pengunjung itu. Bukan karena dia menyerah dan melangkah mundur, tetapi sejak tadi orang-orang di depannya terus menyikut dirinya hingga Askari selalu mundur ke belakang dan semakin menjauh. </p>
+
+
+        <p> Sekala terdiam sembari memandangi langit. punggungnya telah tersandar dengan santai ke pohon agak rindang di belakangnya. satu kakinya terjulur sedang yang lain tertekuk. helaan nafasnya sudah berkali kali terdengar. "harusnya gua dulu ikutin kata adik, gausah main permainan gak berguna kaya gini." helaan nafasnya semakin berat, dia rindu adiknya dan masakkan adiknya yang sekarang dipikirannya terasa amat lezat, setidaknya lebih lezat dari makanan disini. tangannya meraih kantong air yang selalu disampirkan di pinggangnya, kemudian dia meneguk airnya hingga tak bersisa. masih terasa haus, mengembara sendirian di dunia yang dia sendiri enggan berada disini, harus bertarung dengan monster bedebah agar bisa bertahan hidup. dari kejauhan, sekala memandangi sekumpulan serangga yang berpergian berkelompok. dia hanya terkekeh pelan lalu menunduk dan membasuh penuh wajahnya dengan kedua telapak tangannya. mungkin saatnya dia bangkit dan kembali mencari guild baru. lelaki itu kemudian bangkit dari duduknya, kembali mengikat kantong airnya di pinggangnya dan sedikit merenggangkan tubuhnya dan memaksakan bibirnya untuk tersenyum. "damn, mau nyerah tapi cilok enak." ujarnya sendiri. kakinya langsung melangkah tanpa arah. dalam perjalanannya, dia hanya berhasil menemukam telaga yang berisi air bersih tanpa menemukan seekor babi atau rusa untuk diburu. awalnya air mampu untuk menahan rasa laparnya, namun lama kelamaan, tubuhnya mulai lemas karena tidak makan selama beberapa jam. sekala terdiam, andai dulu dia bisa berbaur dengan benar dengan guild lamanya, pasti dia tidak akan diasingkan dan dibuang seperti ini. kemungkinan memiliki tempat tidur layak dan makan tiga kali sehari pun terbayang dibenaknya. kenangan lamanya bersama guildnya kembali berputar diingatannya, bagaimana mereka menjauhi sekala karena ucapannya yang terlalu tajam. 'tapi mereka harusnya gak kesinggung, kan itu kenyataan' pikir sekala sembari kembali mengelus perutnya yang berbunyi lagi. lelaki itu kembali berjalan sampai tiba disuatu pasar yang telihat ramai. pembeli maupun penjual. matanya langsung tertuju pada daging yang terlihat montok yang dijajakan. dia merogoh kantongnya perlahan, COLnya tidak lebih dari 30.000. dia kemudian mendekati penjual tersebut, tatapannya hanya tertuju pada daging yang dijual. dia berdehem pelan sembari menunjuk ke arah daging tersebut. "apa ini? keliatan enak, tapi kayanya kalau buat 50.000 kemahalan deh, nego bisa gak? jadi 10.000 aja?" tawarnya kepada penjual yang hanya melongo saat mendengar tawaran tak masuk akal miliknya. yah mau bagaimana lagi, dia harus mengirit COL miliknya. </p>
+
+        <hr>
+
+        <p> Dari banyaknya orang yang berkerumun untuk melihat apa yang Jemima jual, tidak sedikit yang menawar dengan harga murah. Sebenernya juga kalau Jemima sedang baik dia akan lepas daging itu untuk 20.000 COL, hanya saja jiwa licik mirip rubah itu sudah bersemayam begitu lama jadi dia putuskan untuk tidak jadi baik kali ini. </p>
+
+        <p>Di antara penawar itu ada sosok yang berani menawar 10.000 COL saja dan nyaris buat rahang Jemima melorot turun sampai kaki. Dia menghela nafas kemudian mengangkat daging itu kehadapan pemain yang nampaknya sedikit lebih tua darinya dengan empat sudut siku imajiner yang berdenyut di dahinya tapi tetap memaksa senyum ramah. "Kak! Ini tuh sepadan loh~ Rare item dan level S lagi, dagingnya enak, lembut dan... harus di tangani koki handal. Jadi 10.000 COL terlalu mu..." kalimat itu menggantung begitu saja saat dia tidak sengaja melihat kearah weapon si empunya dan perawakan yang terlihat tangguh.Detik itu juga bagai angin berhembus dia berubah pikiran, berdiri di hadapan pemain yang entah siapa namanya. Di dalam kepalanya kita bermunculan kata kalimat seperti, perawakannya oke dan kelihatan tangguh, weaponnya ga kaleng kaleng, apa ajakin aja ya bangun guild?  Pertanyaan itu berputar di kepala sampai-sampai buat Jemima geleng kepala untuk enyahkah suara suara batinnya itu.</p>
+
+        <p> "Ku lihat-lihat ya kak, sepertinya kakak ini solo player ya? dan kelihatan tangguh? jadi sebagai kebaikan hatiku, ku jual daging ini 10.000 COL tapi dengan syarat izinkan aku ikut makan dagingnya dan... gabung dengan soon to be guild ku, gimana?  mau ga?"  dia akhirnya menawarkan pilihan lain sebagai ganti 40.000 COL yang mungkin tidak bakal dia dapatkan lagi setelah ini. "Aku serius loh kak?" Ujarnya kemudian membuka jendela dan mengirimkan pesan berupa invitation  pembentukan guild. Dia tidak berharap banyak sejujurnya dengan guild ini, tapi apa boleh buat, keinginan untuk segera keluar dari dunia game dan makan ramen favoritnya juga mochi green tea sudah sangat bulat. Jadi berharap saja jika pilihannya kali ini luar biasa benar. </p>
+
+        <p> "Semoga..." batinnya berseru sembari memperhatikan raut lawan bicara yang sedang menimbang. </p>
+
+        <hr>
+
+        <p> sekala mengerutkan dahinya 'orang mau beli daging kok malah diajak bikin guild?' pikir sekala. dia hanya menatap laki laki di depannya dengan tatapan aneh. mungkin sudah saatnya untuk sekala bergabung ke dalam guild baru dan move on dari guild lama yang meninggalkannya. "kalau gabung makannya daging terus ya? yaudah deh" sekala mengangguk pelan sembari menerima invitation dari lelaki itu lalu memberikan 10.000 COL untuk daging yang tadi dibelinya. sekarang dirinya sudah kembali membentuk guild, dia hanya berdoa semoga guild kali ini tidak mengecewakannya seperti yang sebelumnya meskipun guild barunya dirintis dari awal. </p>
+
+        <p> Seperginya Niko memisahkan diri dari rekan satu Guildnya; Jane dan Aksari, ia memulai perjalanannya seorang diri. Niko; pemuda yang dikenal tak pernah lelah dan selalu bersemangat, seakan energinya tak pernah habis atau berkurang sedikitpun.  Dalam perjalanannya dengan mengikuti rasa lapar, Niko sedikit merasa khawatir. Ia juga pasti memikirkan bagaimana kondisi rekan satu Guildnya tersebut, apalagi Aksari yang terlihat sangat kelelahan.  Namun apa boleh buat jika ego masa muda dapat berkuasa di atas segalanya? Pemikirannya adalah jika ia mampu meng-upgrade skillnya, maka ia tidak akan lagi kehilangan rekan satu Guildnya. Pertarungan terakhir yang sangat meninggalkan luka, membuatnya berdiri di sini.  Bermodalkan keyakinan dan tekad penuh, perjalanan berburu untuk menaikkan level dan skill akhirnya dimulai. Hidup sebagai solo player membuatnya lebih fokus berorientasi terhadap dirinya sendiri.  'Mau apa?' 'Mau kemana?' 'Apa selanjutnya?' adalah pertanyaan-pertanyaan yang akhirnya ia bisa dapatkan jawabannya.  Serangan demi serangan pun terus diluncurkan, layaknya seorang pro, Niko terlihat sangat mendominasi. Ia tak kenal lelah dan gentar, ia puas atas apa yang dilakukannya.  Meskipun harus menghabiskan beberapa hari sendirian, ia tak masalah. Hingga dirasa cukup pada level dan skill yang ia usahakan sendiri itu, kali ini tiba saatnya menyusul rekan satu Guildnya. 
+
+        <p>Perjalanan dimulai, Niko tau bahwa berkeliaran seorang diri cukup berbahaya jika nantinya bertemu dengan monster. Namun, bukankah itu sudah menjadi risikonya?  Segala sesuatu yang sudah bulat diambil dalam keputusannya, tak seorang pun dapat mengintervensi. Meskipun kejamnya risiko pasti akan dihadapinya.  Dan benar, tak lama dari perjalanannya dalam sendiri itu ia bertemu dengan monster berukuran sedang. Mau tak mau Niko pun harus melawannya.  Sambil berlari dan melompat, aksi heroik dilakukannya. "HIIIAAAAAHHHHH" teriaknya begitu nyaring. Dalam tiga kali serangan, monster itu pun kalah. Perjalanan terus berlanjut, beberapa kali perjalanan Niko harus tertunda untuk melawan monster-monster yang menghadang jalannya.  Namun berkat level dan peningkatan skillnya yang cukup signifikan, akhirnya Niko bertemu dengan Jane dan Aksari, juga seseorang yang baru dijumpanya, bernama Esar.  Seakan tak menyuruh Niko beriatirahat sedikitpun sepulangnya dari berkelana, Esar mengajak kami; Niko, Jena, dan Aksari pergi menuju pasar.  Dalam perjalanannya Niko banyak bercerita, bagaimana rasanya berkelana sendiri. Pun dengan rekannya yang menceritakan bagaimana temunya dengan Esar.  Keakraban mulai menyelimuti keempatnya, bagai rekan lama karena tak harus banyak bicara untuk menemukan frekuensi yang sama. </p>
+        <p>Saat di pasar, mereka bertemu dengan dua pemuda yang sedang tawar menawar daging untuk menjadi rekan Guild, "lucu sekali" batin Niko. Atas seizin Jena, mereka pun diajak bergabung dengan Guild Ignited Souls.  "Oya oyaa~ kalian ini sedang bertransaksi apa?" canda Niko sekaligus menyapa. Dasar, seperti sudah saling kenal saja. Jemima tersenyum kemudian menjawab, "kami akan membentuk Guild bersama".  Dengan perasaan antusias, Aksari pun mengajak mereka bergabung, "Bagaimana jika kalian saja yang bergabung dengan Guild kami?" tentu saja karena kami berempat sudah membentuk Guild terlebih dahulu.  Senyum merkah menghiasi kedua wajah mereka pun dengan empat orang lainnya. Luka kehilangan rekan Guild berangsur terobati. Kembalinya Niko, Sang Penyelamat Esar, dan Kedua anggota penuh tawa Jemima dan Sekala. Panggilah mereka "Ignited Souls".  </p>
+
+        <hr>
+
+        <p> Hitung-hitung sebagai latihan untuk meningkatkan level dan skill tiap anggota.Saking seringnya berlatih, guild yang diketuai oleh seorang perempuan bernama Janealy Kaleena itu dengan cepat jadi perbincangan oleh para guild lain dan juga beberapa pemain yang pernah berpapasan atau bahkan jadi rekan tim mendadak saat mereka menghadapi boss lantai. Reputasi untuk guild yang nyaris hilang itu kini naik lagi ke permukaan, tentu dengan hadirnya tiga orang anggota baru yang juga sama gigihnya untuk memperkuat diri.Karena bagaimanapun, setelah sesi mengenal satu sama lain mereka ternyata punya satu tujuan yang sama, yaitu ingin menyelesaikan permainan dan kembali ke dunia nyata.Jadi tidaklah heran jika mereka akan amat sangat bersemangat jika sesi berlatih atau berburu tiba. </p>
+
+        <p>Guild itu sudah terbentuk selama satu bulan lamanya, dan selama satu bulan itu pula level dan skill anggota mengalami peningkatan yang pesat. Bahkan tidak jarang Askari ataupun Esar sering bercanda kalau keduanya mungkin bisa membuat boss lantai pingsan dengan sekali tebasan kombinasi yang mereka latih sangat giat belakangan ini saat latihan. Melihat kegigihan yang muncul satu persatu itu, Janealy dibuat bangga. Oh tentu sebagai ketua guild dia sangat bangga dengan pencapaian yang rekannya buat, dan tentu untuk diri sendiri karena tidak pernah memilih untuk menyerah. Diselimuti kobaran semangat Janealy akhirnya memutuskan bahwa sudah saatnya bagi mereka untuk bergerak dan mulai untuk menghabisi boss lantai satu persatu. Karena dengan apa yang kini Ignited Souls miliki, dia yakin guildnya akan mampu menghadapi mereka semua. "Persiapkan diri! Kita akan pergi." Begitu seruan si ketua yang di hadiahi sorak semangat dan piwit piwit gaje ala Sekala yang tengah sumringah karena akan kembali melawan boss lantai yang jeleknya minta ampun. Berbekal kekuatan yang jauh lebih baik, Ignited Souls berderap pergi guna menuntaskan misi untuk satu tujuan yang sama. Pulang! </p>
+
+
     </div>
 </body>
 </html>
