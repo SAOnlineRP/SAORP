@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flip Book - Samuel</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap" rel="stylesheet">
+</head>
+<style>
+    
+    @import url("https://fonts.googleapis.com/css2?family=Judson&family=Quando&display=swap");
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        display: grid;
+        justify-items: center;
+        font-family: "Judson", serif;
+
+        --brown: rgb(90, 55, 8);
+        --bkg: rgb(255, 255, 232);
+
+        background-color: var(--bkg);
+        background-image: url("https://www.transparenttextures.com/patterns/cream-paper.png");
+    }
+
+    p {
+        line-height: 30px;
+        text-align: justify;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    p > span {
+        font-weight: 400;
+        font-style: italic;
+        display: block;
+        padding: 1em 3em;
+        font-size: 1.2rem;
+    }
+    p > strong {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    h1,
+    h2,
+    h3 {
+        font-family: "Quando", serif;
+        color: var(--brown);
+    }
+
+    .bkg {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 900px;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+        opacity: 0.5;
+        mix-blend-mode: exclusion;
+    }
+    .bkg img {
+        width: 100%;
+        height: auto;
+    }
+
+    .page {
+        width: 100%;
+        max-width: 800px;
+        padding: 1em;
+        font-size: 18px;
+        position: relative;
+        z-index: 1;
+    }
+    .page h1 {
+        font-size: 3rem;
+        margin: 1em 0 0.1em;
+        justify-self: end;
+    }
+    .page h2 {
+        font-size: 1.4rem;
+        justify-self: end;
+    }
+    .page h3 {
+        font-weight: normal;
+        margin: 2em 0 3em;
+        font-size: 1rem;
+        justify-self: end;
+    }
+
+    .back-link {
+        position: fixed;
+        top: 20px; /* Adjust the top distance as needed */
+        left: 20px; /* Adjust the left distance as needed */
+        background-color: #ffffff; /* Optional: Set background color for better visibility */
+        padding: 10px;
+        border-radius: 5px;
+        z-index: 1000; /* Ensure it's above other content if necessary */
+    }
+
+</style>
+<body>
+    <div class="bkg">
+        <img src="https://www.sicontis.com/codepen/cpc-book-text/flowers.png" alt="flowers background">
+    </div>
+    <div class="page">
+
+        <a href="./book.html"  class="back-link">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                <path fill="currentColor" d="M6.5 3L2 7.5l4.5 4.5V9h7V7H6.5V3z"/>
+            </svg>
+            Back to List Plot
+        </a>
+    
+        <h1>PLOT STORY</h1>
+        <h2>by GUILD : BEAT3R</h2>
+        <br>
+        <p>Prang...!</p>
+        <p>Terdengar suara pecahan kaca dari lantai bawah. Seperti biasa, pagi ini begitu damai dengan rutinitas sarapan pagi. Memiliki keluarga harmonis, penuh kehangatan, dengancanda tawa yg membahagiakan. Siapa yg tidak iri melihatnya.Ya iri, itu yg dirasakan Adnan, dari keluarga Lee yg jauh dari kata harmonis. Di pagi hari yg cerah selalu mendapati kebisingan dari dalam rumahnya. Entah siapa yg menjadi korban pagi ini, sudah tidak peduli rasanya. Menjadi anak tengah, membuat suaranya tidak didengar. Senyum kecut terukir di bibir Adnan, dia mengangkat dua bahunya tinggi, dan mengabaikan apa yg terjadi. Memastikan pintu terkunci dengan rapat tanpa celah, Adnan meraih NerveGear dan menggunakannya bersiap untuk pindah dunia dalam dunia yg dia ingin. "LINK START!" </p>
+
+        <p>Memejamkan matanya dan memutuskan hubungan dengan dunia real untuk menjadi karakter baru di dunia yg berbeda. "Harusnya gua memang hidup didunia ini saja." Dia memandang kedua tangannya yg tidak nyata itu, tapi merasakan kehangatan bahkan seperti nyata. "Ada apa?" Tanya Adnan kesalah seorang di sampingnya. "Tidak ada tombol log out didalam bar menu. Kita tidak bisa keluar dari dunia game ini."  'Harusnya bagus kalau begitu.' senyuman miring terukir dari sudut bibir Adnan. "Lalu bagaimana?" Menanyakannya lagi.</p>
+
+        <p>Crashh...!!</p>
+
+        <p>Belum sempat orang tersebut menjawab pertanyaannya, semua pemain telah berpindah ke sebuah aula. Sebuah makhluk berjubah besar muncul, mengatakan semua yg berasa di dunia ini tidak akan bisa kembali lagi, akan terus terjebak disini selamanya. "Kalian tidak bisa keluar HAHAHA Kalian akan terus terjebak disini sampai semuanya telah menyelesaikan melawan bos di lantai terakhir." </p>
+
+        <p> “Dan kalian yang kehilangan nyawa ketika bertarung akan kehilangan nyawa juga di dunia nyata." "Tidak ada larangan untuk pertarungan, kalian semua bisa saling membunuh. Sekarang yang kuatlah yang akan bertahan” Ucap Mahkluk besar berdiri gagah. Semua orang yang berada di aula menjadi semakin panik dan menjadi was-was dengan orang yang berada di dekatnya.  Narayan mendekati Geoffano yg menjadi partner diawal game ini mulai tadinya.</p>
+
+        <p>“Gua gak mau lu mati di dunia ini bro” Narayan menepuk pundak Geoffano yg terlihat mulai murung mendengarkan berita yg mengejutkan itu. Ryoichi celingukan diantara banyaknya manusia yang berkumpul. Setelah pengumuman yang menggemparkan itu, ia panik membayangkan akan bagaimana hidupnya di dunia game ini. Ia tak mau mati konyol di dunia nyata hanya game gak jelas yang ia mainkan. Dimana letak harga diri bro?! “Gawat. Lebih baik aku cari orang yang terlihat kuat agar aku selamat.” ocehnya sambil menerobos kerumunan dengan susah payah. Berbagai ekspresi ia temukan sepanjang perjalanan, mulai dari ketakutan, menangis bahkan ada juga yang malah tersenyum menakutkan. Kemudian ia melihat dua orang tengah berdiri bersama. Ia memindai dengan seksama. ‘Sepertinya mereka tampak cukup kuat, aku harus bergabung dengan mereka’ batin Ryoichi, segera ia dekati keduanya dengan langkah percaya diri. Percaya diri dulu, malunya belakangan. “Hai?” Ryoichi mencolek bahu salah satu orang yang berdiri hingga ia menoleh. “Sepertinya seru jika membuat sebuah perkumpulan bersama. Bolehkah aku bergabung?” tanyanya dengan senyum yang lebar. "Kenalin dulu, namaku Ryoichi Yukishiro. Sebenarnya aku masih siswa SMA. Salam kenal ya, hehe." Ryoichi menggaruk kepalanya yang tak gatal. Menanti jawaban yang keduanya lontarkan dengan was-was.</p>
+
+        <p>'Apakah aku sudah terlihat natural?' tanyanya dalam hati. "Wah, sinting itu orang! Yang bener aja, anjir! Gue besok ada kumpulan karang taruna di real life, cok. WOI!" Pria dengan penampilan serampangan itu terus menggerutu hingga tak memikirkan keadaan di sekitarnya. Geo, nama pria itu. Geo yang sedang emosi langsung menatap ke arah lelaki di sampingnya yang diketahui bernama Narayan. "Bro, gue nggak mungkin jalan sendiri. Gimana kalau bareng lo? Bikin gu—" Ucapannya terputus karena pria itu sedikit terkejut saat ada seseorang yang menepuk bahunya. Dengan segera, ia langsung memusatkan pandangannya kepada orang tersebut, "Oh Tuhan, gue kaget banget anjir!" Geo melihat penampilan orang itu dari atas hingga bawah, lalu tersenyum dengan lebar seperti mendapatkan hadiah lotre terbaru. </p>
+
+        <p>"Woah, ada adik manis! Mau bergabung sama kami? Kebetulan kami baru berdua sih, tapi nambah satu lagi kan jadinya asoy!" Ia mengulurkan tangan lalu menyapa ramah orang tersebut. "Gue Geo, panggil aja Ge atau Geow atau Geooo, yang panjang juga boleh, suka-suka lo. Dan ini temen gue namanya Narayan." Melihat kedua lelaki tersebut sedang asik mengobrol, Geo langsung mengoperasikan fitur yang ada di dalam game tersebut dan mengundang Ryoichi— nama lelaki itu—untuk bergabung kedalam Guild yang baru saja terbangun karena suatu kejadian. "Lo udah gue undang ya, bisa dilihat disitu nama kita bertiga terpampang jelas disana." Geo menunjuk bar yang ada di depan Ryoichi, lalu kembali menatap kedua lelaki tersebut, "Oh iya, gue yakin lo semua belum punya senjata yang bener kan? Gue ada kenalan disini, dia punya logistik senjata, ayo kesana". Mereka berjalan beriringan lalu meninggalkan aula utama. </p>
+
+        <p>Zaffar, si mental pedagang yang dibawa ke game. Niat awal bermain game ini hanya coba coba namun siapa sangka akan terjebak? Bukan masalah, asalkan bisa cuan, itulah pikiran simplenya. Selama berada dalam game, yang dilakukan zaffar hanya berburu untuk bahan senjata, gunanya untuk apa? Tentu dijual lagi. harga sesuai kualitas, itu adalah mottonya, namun tak sedikit juga pikiran dirinya yang ingin segera pulang. Walau berdagang disini jauh lebih mudah. Namun nyawa adalah taruhannya. Kali ini, zaffar mendapatkan material bagus untuk membuat senjata, kurang lebih ia membuat 5 macam senjata dengan item langka. "Sepertinya, ini bukan hanya masalah harga lagi" pikir zaffar sambil melihat pedang yang ia tempa. Akhirnya, ia memutuskan untuk memajang senjata itu, dan suatu saat akan ia berikan pada siapapun yang mampu mengayunkan pedang monster itu.  Dan disitulah, ia membuka sayembara seraya membuka lebar tokonya. Zhia. Seorang gadis yg awalnya ketakutan berada di dunia game ini. Bagaimana tidak takut kalau ia sendirian? Ia tidak bisa menemukan teman2 yg biasa bermain dengannya. Akhirnya ia memutuskan untuk jadi pemburu hewan dgn skill nya yg lumayan. Hari ini Zhia pergi berburu disalah satu hutan tenang. Biasanya disini suka bermunculan hewan-hewan yg levelnya cukup mudah ditaklukkan. Yups! Zhia hanya akan berburu santai karena kemarin ia kelelahan. Zhia terus berjalan jauh kedalam dan berhenti disebuah pohon besar. Infonya disini ada hewan langka! Zhia pun akan berburu demi mendapat bonus langka juga.</p>
+
+        <p>Setelah berburu hewan2 lain, hewan langka itu pun muncul. Dan ternyata kelinci! Zhia bergegas mengejar kelinci langka itu, dan yups! Dia berhasil! Bonus pun sudah ia dapatkan.
+        Zhia memutuskan untuk bersantai dulu di ladang hijau tengah hutan untuk beristirahat. Saat sedang asyik bersantai, tiba2 ada babi muncul!  "Arghhh sial! Kenapa harus ada babi sih?" Ucapnya kesal. Zhia dan para babi saling berhadapan, ia berusaha acuh agar tak di notice babi! Sebagai catatan, Zhia ini takut sama babi. Karena dulu dia sempat dikeroyok sekelompok babi hutan dan membuatnya sedikit trauma .</p>
+
+        <p>Babi hitam pun mulai mendekatinya, Zhia yg sadar mengambil langkah mundur alon-alon. Si babi yg cukup agresif ini pun mulai mengejar Zhia, alhasil Zhia mengambil langkah seribu sambil berteriak… "Shibal! TOLONGGGGG AAAAAAAA. Hus hus ada babi jelek aaaaaaaaa"
+        Ia terus berteriak, sampai akhirnya ada orang yg menolongnya. </p>
+
+        <p> Ditengah perjalanan menuju lokasi persenjataan, Ryoichi seperti mendengar suara teriakan. "Bang, tunggu deh kaya ada suara teriakan." Ryoichi melihat kesekitar berharap menemukan sumber suara yang ia dengar. Sontak mereka bertiga berhenti dan ikut menatap sektar. Ryoichi akhirnya menemukan sumber kegaduhan, terlihat seseorang tengah berlari dan dikejar oleh sesuatu. "Ehhh, itu bang lihat! Ada cewek dikejar babi. Tunggu disini bang, akan kutunjukkan kebolehanku." ucap Ryoichi sembari berlari menyusul cewek di depan. arak antara Ryoichi dengan babi cukup dekat. Ia segera menghunus panahnya dan membidiknya ke arah badan babi. Terlihat keren apabila tidak melihat adegan berikutnya.</p>
+
+        <p>Panah tersebut melayang tanpa kekuatan dan hanya menabrak badan babi tanpa melukainya. Alhasil, babi pun menargetkan Ryoichi yang kemudian ikut berlari bersama wanita tadi. "Eh loh? Ehh! Ehhh tunggu! TOLONGGG ABANGG, ICHI DIKEJAR BABI BAAANG TOLOONG!!!" Ryoichi dan wanita tadi berlari ke arah dimana kedua Narayan dan Geo berdiri. Melihat ada dua orang yang berlari ke arahnya, Geo seketika langsung memicingkan mata dan melihat ada babi yang berlari mengejar mereka. "Hoi.... HOI lo berdua kenapa anjir?" Dengan segera Geo langsung menghunuskan pedangnya dan melawan babi tersebut. "Lo yang bener aja anjir masa dikejar lari kabur? Ya dikejar lah— eh siapa nih? Anjay, lo bawa member baru ya?" Geo langsung bergerak mendekati perempuan tersebut dan mengedipkan matanya. "Halo? Kenalan dulu sini sama Geo yang ganteng. Mereka berdua aja kalah sama gue yakan?" Kedua tangan Geo ditaruh di bawah dagunya dan tiba-tiba mengaduh kesakitan saat ada babi yang menyeruduk bokongnya. "ANJIR! Woy kabur woy dia bawa pasukan!" Geo dan 3 orang lainnya langsung lari dengan terbirit-birit hingga memasuki toko senjata yang berada di kota itu. </p>
+
+        <p>Tanpa mereka sadari, ada sosok lelaki yang melihat mereka dengan tatapan kurang bersahabat. Adnan memandang aneh ketika beberapa orang memasuki toko dengan terburu-buru. Yg benar saja, player dikejar babi? Menghela nafas, Adnan keluar dari toko. Sebuah senapan laras panjang pun dikeluarkannya, dan membidik satu persatu hewan yang seharusnya menguntungkan itu. Geo terpukau melihat aksi Adnan barusan, dan mendekatinya. "Bro, yg tadi itu keren sekali. Gua undang lu ke guild yg kebetulan mau menyerang bos." Dengan wajah yg sumringah Geo menjulurkan tangannya untuk di jabat. Adnan memperhatikannya dan temannya satupersatu. 'Para pemula?' pikirnya. </p>
+
+        <p>"Apa rencana guild kalian saat ini?" Menatap datar kepada Geo. Geo hanya memandang tangannya yg diabaikan. "Sebenarnya kami belum mempelajari apa pun, tapi gua tau lu kuat dan ahli dalam game ini." 'Bos bukan hal yg mudah, untuk seorang solo seperti gua. Dan sepertinya mereka membutuhkan bantuan. Apa salahnya untuk bergabung guild kali ini.' Adnan menganggukkan kepala.  "Baiklah, jangan mengecewakan." Akhirnya Adnan menjabat tangan Geo. </p>
+        —--------------------
+        <p>"Bro, gue ambil kanan dan lo ambil kiri ya. Hitungan ketiga kita serang bareng! 1, 2, 3!" Dua pemuda yang diketahui bernama Geo dan Narayan langsung berlari menuju tempat mereka masing-masing. Di garis belakang ada Adnan yang bersiap untuk menghunuskan pedangnya. "Gue cuma bisa tahan 30 detik, lebih dari itu gue gak bisa. Lo siap kan?", teriak Geo sambil menahan serangan bos tersebut.Ia melirik ke belakang, Adnan yang bersiap di posisi tengah dengan Zhia di samping kanan dan Zaffar di samping kiri. Dan dari arah atas, Ryo langsung melesatkan panahnya dan mengenai tepat atas kepala bos tersebut, "GOTCHA!" Teriaknya. Geo dan Narayan sudah kewalahan untuk menahan boss tersebut, lalu berdiri dan segera mundur dari posisi sebelumnya. "SEKARANG!" Geo dan Narayan serentak mengambil langkah mundur untuk memberikan Adnan, Zhia,  dan Zaffar menyerang bos.</p>
+
+        <p>Zaffar dengan lincah berlari kearah bos dengan mengayunkan pedangnya menyayat badan bos sepanjang dada hingga ke pinggang. Selanjutnya Adnan berlari dengan sangat cepat menuju bos terakhir dan merobek lebih dalam badan bos hingga memperlihatkan sedikit celah jantungnya.  Ryo yang sudah melihat jantung bos terakhir, langsung membidiknya dengan panahan ditangannya, shu. panah berhasil menancap kuat. Zhia berlari dan membidik jantung bos terakir dengan pedangnya dan menancapkan ujung pedangnya kearah jantung sang bos terakhir. Dibelakangnya Narayan ikut berlari dan memberikan cairan berwarna hijau untuk dilumuri di pedangnya Zhi, Pakai ini agar ebih besar damagenya." Zhia mengangguk lalu melumuri pedangnya sambil berlari kearah sang bos terakhir.</p>
+
+        <p>TSAAP</p>
+
+        <p>Pedang Zhia tertancap kuat bersamaan dengan panahan Ryo di jantungnya sang bos. 
+        "AAAAAKKKHHHHH" Tepat setelah panahan tertancap di jantung, bos terakhir berteriak sambil membusungkan dadanya. cahaya keluar dari jantungnya mengisi area pertarungan hingga membuat pemain menghalangi pandangannya menggunakan tangan. Tak lama cahaya silau menghilang menghasilkan percikan cahaya kecil diudara, sontak semua pemain membuka mata mereka dan tidak ada apapun lagi dihadapan mereka. Sang bos terakhir, telah tiada. Mereka semua, telah mengalahkan sang bos terakhir.</p>
+
+        <p>Kemenangan ada ditangan mereka. </p>
+
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flip Book - Samuel</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap" rel="stylesheet">
+</head>
+<style>
+    
+    @import url("https://fonts.googleapis.com/css2?family=Judson&family=Quando&display=swap");
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        display: grid;
+        justify-items: center;
+        font-family: "Judson", serif;
+
+        --brown: rgb(90, 55, 8);
+        --bkg: rgb(255, 255, 232);
+
+        background-color: var(--bkg);
+        background-image: url("https://www.transparenttextures.com/patterns/cream-paper.png");
+    }
+
+    p {
+        line-height: 30px;
+        text-align: justify;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    p > span {
+        font-weight: 400;
+        font-style: italic;
+        display: block;
+        padding: 1em 3em;
+        font-size: 1.2rem;
+    }
+    p > strong {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    h1,
+    h2,
+    h3 {
+        font-family: "Quando", serif;
+        color: var(--brown);
+    }
+
+    .bkg {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 900px;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+        opacity: 0.5;
+        mix-blend-mode: exclusion;
+    }
+    .bkg img {
+        width: 100%;
+        height: auto;
+    }
+
+    .page {
+        width: 100%;
+        max-width: 800px;
+        padding: 1em;
+        font-size: 18px;
+        position: relative;
+        z-index: 1;
+    }
+    .page h1 {
+        font-size: 3rem;
+        margin: 1em 0 0.1em;
+        justify-self: end;
+    }
+    .page h2 {
+        font-size: 1.4rem;
+        justify-self: end;
+    }
+    .page h3 {
+        font-weight: normal;
+        margin: 2em 0 3em;
+        font-size: 1rem;
+        justify-self: end;
+    }
+
+    .back-link {
+        position: fixed;
+        top: 20px; /* Adjust the top distance as needed */
+        left: 20px; /* Adjust the left distance as needed */
+        background-color: #ffffff; /* Optional: Set background color for better visibility */
+        padding: 10px;
+        border-radius: 5px;
+        z-index: 1000; /* Ensure it's above other content if necessary */
+    }
+
+</style>
+<body>
+    <div class="bkg">
+        <img src="https://www.sicontis.com/codepen/cpc-book-text/flowers.png" alt="flowers background">
+    </div>
+    <div class="page">
+
+        <a href="./book.html"  class="back-link">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                <path fill="currentColor" d="M6.5 3L2 7.5l4.5 4.5V9h7V7H6.5V3z"/>
+            </svg>
+            Back to List Plot
+        </a>
+    
+        <h1>PLOT STORY</h1>
+        <h2>by GUILD : 4-SIX</h2>
+        <br>
+        <h4>ACT. I. PROLOGUE</h4>
+        <h4>𝐶𝑒𝑛𝑡𝑟𝑎𝑙 𝑃𝑙𝑎𝑧𝑎, 𝑇𝑜𝑤𝑒𝑟 𝑜𝑓 𝐵𝑒𝑔𝑖𝑛𝑛𝑖𝑛𝑔𝑠</h4>
+        <br>
+        <p>Altaraine masih menatap tajam ke arah langit yang kini sudah berubah warna seperti semula—langit senja yang berwarna jingga, tidak seperti saat sang Game Master tadi muncul, berwarna merah pekat seperti darah. Dia masih tidak percaya dan meragukan ucapan beliau. Setega itukah? Pikirnya. Padahal game bertema VRMMORPG ini telah meraup keuntungan yang sangat banyak dengan jumlah pemain sebanyak 10.000 orang. Namun, jika pun apa yang dikatakan oleh Kayaba Akihiko benar, maka dia harus memeriksanya. Dia menggerakkan sebelah tangan yang berfungsi seperti kursor dan mencari ikon tujuannya.</p>
+
+        <p>“Tidak ada….” ucapnya terbata, hampir tidak ingin percaya. Tombol logout dengan ikon berupa pintu itu tidak bisa dia klik di menu bar, tidak seperti biasanya. Dia merasa sepertinya ini akan menjadi lebih parah dari saat dia menjadi beta tester sebulan yang lalu. Sebelah tangan yang menutupi mulut Celesta tidak bergerak, sang gadis masih terkejut dengan kenyataan bahwa dirinya tidak bisa kembali ke dunia nyata—seperti apa yang diberitahukan oleh sang Game Master.</p>
+
+        <p>“Lalu bagaimana dengan keluargaku? Teman-temanku?” batinnya. Bisakah dia menolak keputusan itu? Dia ada janji berkumpul dengan teman-teman sekolahnya setelah sekian lama mereka tidak bertemu. “Bagaimana dengan ibuku?” bayangan sang Ibu yang pasti sedih melihat anaknya tak kunjung sadar padahal hanya izin untuk bermain game online sejenak setelah pulang sekolah itu menghantui benaknya. Celesta bahkan ragu, apakah dia bisa kembali ke dunia nyata? Atau malah mati karena NerveGear yang terpakai di kepalanya itu membuat otaknya terbakar seperti berada di dalam microwave? Kalau-kalau salah satu anggota keluarganya memutus sambungan listrik secara tiba-tiba. </p>
+
+        <p>“Jika kalian tidak percaya, ada satu item spesial yang bisa dipakai oleh seluruh pemain.”</p>
+
+        <p>Mendengar hal itu, Gabriel segera memeriksa inventory box di menu bar-nya, rupanya benar. Ada satu item bernama ‘Hand Mirror’ di sana. Dia mengkliknya dan secara otomatis, item itu sudah berada di genggaman tangannya. Gabriel menghela napas sebelum
+        mengarahkan cermin itu ke wajahnya.</p>
+
+        <p>AAAKH!</p>
+
+        <p>Teriakan di sekitarnya menggema saat sesuatu terjadi. Kini, di hadapannya bukan lagi sosok karakter yang dia pilih di awal permainan, tetapi sosok itu telah berubah, menjadi wujudnya yang asli, wujudnya di dunia nyata. Dia meremas cermin itu hingga hancur. Kayaba, geramnya dalam hati. “AAAAA! APA-APAAN INI? TIDAK ADA TOMBOL LOGOUT?! KENAPA WAJAHKU JUGA MENJADI SEPERTI INI?” Theo berteriak karena terlalu marah dengan keputusan sang Game Master. Wujud karakternya berubah, dan tidak ada suatu cara untuk keluar dari game ini. “Padahal aku sudah delivery makanan enak untuk kusantap saat makan malam,” gumamnya. AAAAA!</p>
+
+        <p>Dia mendengar jeritan lagi dan segera menoleh, tampaknya beberapa pemain mencoba untuk memaksa keluar dari area Central Plaza, namun tubuh mereka hancur. Theo menatap horror. Nara mengepalkan tangannya sampai buku-buku jarinya memutih, meskipun dia pernah menjadi beta tester, yang mana membuatnya tidak asing dengan hal-hal yang ada di game ini, tapi tetap saja dia ingin marah. Dia ingin sekali merasa semua ini tidak adil, namun harusnya yang merasa seperti itu adalah para pemain yang sama sekali tidak pernah menjadi beta tester. </p>
+
+        <p>Lagi pula, dia solo player di sini, dia tidak punya teman atau tanggungan apa pun, dia bisa lanjut maju atau menunggu pemain lain menyelesaikan game mematikan ini. Namun, tentu saja … Sebagian besar dari dirinya masih tidak terima. Terlebih, dia harus meninggalkan semua yang dia punya di dunia nyata, orang-orang terkasihnya.</p>
+
+
+        <p>18:16</p>
+
+        <p>Jeano termenung melihat jam di sudut menu bar miliknya, pikirannya melayang kepada sang kekasih yang pastinya telah menunggu karena mereka berjanji akan pergi ke suatu tempat untuk menghabiskan akhir pekan bersama. Namun, sayang sekali dia malah harus terjebak di sini. “Apa yang harus kulakukan?” dia menundukkan kepala, merasa bingung, emosi mulai membendung di hatinya. Dia tentu tidak akan kalah ataupun mati di game ini, dia tidak mau melihat orang-orang yang dia sayangi itu bersedih karena dia tinggalkan.Jeano harus berjuang untuk bertahan hidup di dunia game ini.</p>
+
+        <p>“Um, ano … Kamu solo player?”</p>
+
+        <p>Jeano mendongakkan kepala saat seseorang berbicara padanya. Di hadapannya kini terdapat lima orang yang menatapnya dengan ekspresi berbeda-beda.  Setelah mengendalikan dirinya kembali, Alta mengedarkan pandangan dan melihat seorang gadis yang sedang jongkok tidak jauh darinya. Dia pun menghampiri. Singkat cerita, dia berkenalan dengan gadis itu, pun dengan empat orang lainnya yang sama-sama solo player. Altaraine melirik HP bar dan MP bar di menu bar miliknya, lalu menimbang-nimbang. “Kita tidak bisa berdiam diri seperti ini saja.”</p>
+
+        <p>“Kita harus ke desa berikutnya untuk leveling jika ingin melawan Bos Monster dan menyelesaikan lantai satu,” jelasnya. Selama diskusi singkat tersebut, diam-diam Gabriel memeriksa map lantai satu yang sangat luas itu, dan dia mengangguk setuju. Tujuannya adalah yang penting dia bisa keluar dan pergi dari Central Plaza yang penuh sesak dengan ribuan pemain ini. “Desa berikutnya … Horunka?” dia bisa melihat sosok pria dengan hidung mancung itu mengangguk.</p>
+
+        <p>“Bagaimana dengan yang lain?” Celesta, karena baru pertama kali memainkan game seperti ini dan langsung terjebak begitu saja di antara hidup dan mati, hanya bisa diam dan mendengarkan. Dia mendongakkan kepala, “Kenapa harus pindah ke desa Horunka? Tidak bisakah kita tetap di sini?” “Central Plaza merupakan zona aman,” lanjutnya. Dia memeluk diri sendiri saat membayangkan sebuah desa yang asing untuknya dan tidak pernah dia kenal selama beberapa jam dia bermain game ini. “Kalau nanti ada PK, kamu mau mati di sini?” matanya langsung membulat. Ucapan yang terkesan galak keluar dari mulutnya sendiri. Theo memang masih ragu ada atau tidaknya PK di game ini, tapi, apa salahnya untuk mencegah?</p>
+
+        <p>“PK adalah pemain killer, bisa dibilang mereka adalah pemain yang membunuh pemain lainnya tanpa motif tertentu.”</p>
+        <p>“Kamu mau mati konyol begitu saja?” tanyanya.</p>
+
+        <p>Ucapan Theo membuat semuanya tertegun, jadi Theo kembali berbicara.“Kita harus menyelesaikan game mematikan ini, dan untuk mengakhiri lantai satu, kita harus melawan Boss,”</p>
+
+        <p>“Tanpa pindah ke desa lain, kita tidak bisa memperkuat diri,” lanjutnya. “Benar apa yang dikatakan oleh Theo. Kita akan buat guild untuk mempermudah komunikasi dan saling melindungi. Bagaimana?” Tidak ada kata-kata penolakan dari Alta, Gabriel, maupun Theo, mereka langsung setuju untuk bergabung ke dalam sebuah guild. </p>
+
+        <p>“Celesta?” Nara bisa mendengar helaan napas gadis itu sebelum mengklik setuju saat undangan guild muncul di hadapannya.</p>
+
+        <p>“Jeano?” Jeano menatap undangan guild itu dengan pikiran yang kusut. Lantas menggerakkan tangannya untuk menekan ikon setuju.</p>
+
+        <p> Kini, dia bukan solo player lagi, semoga saja dia tidak menjadi beban di guild tersebut. “Kita harus ke Teleport Gate dulu, siapkan crystal kalian masing-masing,” ucapnya dan berjalan mendahului yang lain dengan napas berat.</p>
+
+        <br>
+        <h4>ACT. II. THE MEETING</h4>
+        <h4>𝐴𝑚𝑝ℎ𝑖𝑡ℎ𝑒𝑎𝑡𝑟𝑒, 𝑇𝑜𝑙𝑏𝑎𝑛𝑎 𝐶𝑖𝑡𝑦</h4>
+
+        <p>Sudah dua bulan semenjak kedatangan Game Master di Central Plaza, dan sudah 2.000 orang pemain yang mati. Sampai saat ini, lantai satu belum terselesaikan.Nara menatap Theo dan Jeano yang sedang melawan Dire Wolf untuk meningkatkan level mereka. “Good job!” Gabriel ber-high five ria dengan Celesta setelah menyelesaikan Dire Wolf yang menyerang mereka karena Celesta tidak sengaja mengaktifkan battle mode.Dia menatap langit yang sudah kembali senja.  Sungguh menakjubkan, dunia game yang hanya terdiri dari data ini terlihat seperti dunia nyata. “Besok kita harus kumpul ya?” Alta yang masih memeriksa map lantai satu hanya mengangguk. Kedua matanya fokus mencari letak Bos Monster yang sudah lama belum bisa ditemukan.</p>
+
+        <p>“Lokasinya disembunyikan mungkin?” celetuk Theo.  Alta merengut, “Mana ada yang seperti itu. Kita hanya belum menelusuri dungeon, tapi firasatku si Bos tidak ada di sana.” “Lalu bagaimana?” tanya Jeano setelah dia memeriksa item yang didapat dari hasil serangannya kepada Dire Wolf. Meski hatinya masih terasa berat, tetapi untung saja dia tidak menjadi beban di guild-nya tersebut. “Kalau begitu, lanjut besok saja. Kita tanyakan kepada forum, sekarang saatnya kembali ke penginapan,” ujar Theo.</p>
+
+        <p>Hari sudah mulai gelap, dan biasanya monster akan sering bermunculan pada saat seperti ini, dia lebih baik berdiam diri di penginapan. Celesta mengangguk ceria, meski semua orang tahu, dia berusaha keras untuk leveling hingga pasti lelah rasanya. “Kita makan malam apa ya?” “Memangnya kamu sudah bisa memasak?” celetuk Gabriel. Dia meringis menyadari kemampuan memasaknya yang masih di level nol. “Kita mampir dulu ke restoran, agar aman.” Semuanya setuju.</p>
+
+
+        <p>Keesokan harinya mereka bangun cukup pagi dan bersiap untuk menuju Teleport Gate. Forum yang akan diadakan hari ini berada di lokasi berupa amfiteater di sebuah kota yang bernama Tolbana. Saat tiba, tempat tersebut sudah sebagian penuh oleh pemain. Mereka duduk satu baris dan memperhatikan seseorang yang akan menjelaskan tujuan dari pertemuan ini. Altaraine mengerjapkan mata seraya telinganya mendengarkan penjelasan tersebut. Ternyata Bos Monster-nya pernah dia kalahkan, namun apakah akan sama atau malah berbeda?</p>
+
+        <p>“Jalan menuju lokasi Bos Monster itu melalui sebuah hutan, semuanya ada di buku panduan ini,” jelas Diavel. Keningnya berkerut, merasa akan terjadi hal yang menurutnya tidak baik. Celesta segera memeriksa item buku panduan yang disebarluaskan oleh sekelompok orang yang pernah menjadi beta tester. Terdapat informasi lengkap mengenai monster itu di sana. Dia menghela napas lega. “Bagaimana dengan anak buahnya?” “Namanya Ruin Kobold Sentinels,” jelas Nara menjawab pertanyaan Celesta. “Sepertinya kita harus menambah stok health potion dan mana potion untuk berjaga-jaga,” ujarnya.</p>
+
+        <p>“Kita berangkat besok pagi dan—” Theo berjengit mendengar seseorang protes dengan suara tinggi dan menuduh si Pemberi Informasi ini dengan hal yang negatif. Hadeh, gerutunya dalam hati. Theo dan yang lainnya hanya memperhatikan, otaknya memutar strategi apa yang akan mereka pakai untuk menyerang Bos Monster tersebut. “Jangan sampai ada yang tertinggal,” ingatnya.</p>
+
+        <p>Keesokan harinya pun tiba, Gabriel mendengus sedikit kesal saat matahari terasa
+        menyengat pagi itu. “Kenapa tidak lewat dungeon saja?” pertanyaannya langsung ditatap horror oleh Alta.</p>
+
+        <br>
+        <h4>ACT. III. FIGHT THE BOSS</h4>
+        <h4> 𝐹𝑖𝑟𝑠𝑡 𝐹𝑙𝑜𝑜𝑟, 𝐴𝑖𝑛𝑐𝑟𝑎𝑑 𝐶𝑎𝑠𝑡𝑙𝑒</h4>
+
+        <p>Sejak perjalan menuju lokasi Bos Monster, Celesta hanya terdiam saja. Dia tentu saja tidak tenang, dan ketakutannya kembali muncul saat mendengar kata ‘dungeon’. Dia pernah satu kali bertemu dengan monster yang sangat mengerikan di sana, dan terima kasih, dia tidak mau bertemu dengan monster tersebut lagi. “Monster yang membawa Scepter itu sangat mengerikan, jangan dibahas.” </p>
+
+        <p>Keseluruhan tim berjumlah sekitar 40 orang untuk menyerang Bos Monster dan anak buahnya, jumlah yang menurut Theo cukup untuk mengalahkannya. “Yosh. Mari kita serbu Bos Monster itu!” serunya menyemangati.  “Setelah ini sepertinya enak kalau kita mampir untuk makan burger,” celetuk Jeano. Gabriel terkekeh mendengarnya. “Memang ada di sini?” Jeano tersenyum, “Di dekat sini ada restoran, coba nanti kita periksa, mereka menjual menu burger atau tidak.”</p>
+
+        <p>“Guys, tolong fokus ya, ini bahaya kalau kita semua mati konyol dibunuh oleh monster jelek—” ucapan Alta berhenti.</p>
+
+        <p>BRAKK!</p>
+
+        <p>Pintu besi berukuran besar dan tinggi menjulang itu terbuka dengan suara mengerikan. 
+        Ketika seluruh pemain masuk ke dalam ruangan luas itu, satu per satu tungku obor menyala, api besar seolah berlomba meraup langit-langit yang jauh di atas sana.</p>
+
+        <p>“....”</p>
+
+        <p>“SERANG!” seruan para pemain menggema, dan Nara pun menghunuskan pedangnya. Semua pemain sudah berada di posisi masing-masing dan mulai menyerang. Bos Monster tersebut bernama Ilfang The Kobold Lord dengan 4 unit penuh HP bar beserta dua monster berukuran lebih kecil yang menjadi anak buahnya bernama Ruin Kobold Sentinels. “KADAL?!” serunya terkejut. “Eh?! Monsternya bentuk kadal, mana gendut dan jelek pula!” Ce tanpa sadar mem-bodyshamming sang Bos Monster seraya mengayunkan pedangnya. “Switch!” teriakan Celesta membuat Jeano kembali fokus, ternyata sudah gilirannya kembali untuk menyerang.</p>
+
+        <p>GRRRHHHH!</p>
+
+        <p>Monster itu meraung dan melompat, lalu dengan cepat dia menangkap senjatanya, seluruh pemain terpaku melihat hal tersebut. “Gawat!” seru Gabriel, dia melirik Alta dan laki-laki itu hanya menggeleng. Gabriel langsung menyerangnya dan terkena hempasan dari senjata tersebut. Jika Alta yang pernah menjadi beta tester saja bingung dan tidak tahu kenapa monsternya berbeda, lalu bagaimana mereka mengalahkannya? “Gabriel!” Celesta menghampiri temannya tersebut, namun Theo terlanjur teriak.</p>
+
+        <p>Kini, Celesta ikut terlempar jauh terkena serangan dari Bos Monster. “Hati-hati semuanya!” ucapnya sebelum memakai health potion karena HP bar-nya sudah hampir habis. Namun, Celesta sudah tidak sadarkan diri. “Celesta tidak sadar!” seru Nara dan memeriksa HP bar gadis itu yang untungnya masih ada sedikit. “Alta! Cover me, jangan sampai anak buahnya menyerangku selagi aku mengobati Celesta!” serunya lagi. “Theo! Jeano! Coba ulur waktu untuk menyerang dan mengalihkan perhatian si Ilfang Jelek!” teriak Alta. “Yang lain, serang anak buahnya!” dia langsung melompat dan pada hitungan waktu yang menurutnya tepat.</p>
+
+        <p>Lalu, dia segera menancapkan pedangnya, menyeretnya ke bawah, seolah membelah tubuh sang Bos Monster. “....” matanya melotot saat melihat HP bar si Monster hanya berkurang sedikit. Theo langsung menyibukkan Bos Monster dari arah kiri, menyabet, menyayat, dan memukul monster tersebut dengan gerakan cepat. Dia mendengus kesal, “Kenapa HP bar-nya tidak habis-habis sih?!” </p>
+
+        <p>“ARGHH!” </p>
+
+        <p>Theo menatap nanar seorang pemain yang kemarin menjelaskan di forum itu kini sudah mati. Rasa takut pun menjalari tubuhnya. “DIAVEL!” teriak hampir sebagian besar pemain yang ikut dalam penyerangan ini. “Lantai satu saja sudah seperti ini, bagaimana lantai selanjutnya?!” gerutu Jeano dan kembali menyabet lengan kanan monster. Jeano sudah tidak peduli dengan keadaannya yang berantakan karena terciprat darah monster, dia tetap fokus menyerang.</p>
+
+        <p>“Ini berbeda dengan saat beta tester, senjatanya berbeda, dan bisa saja itu yang membuat sang monster menjadi lebih kuat,” jelas Nara saat Gabriel sudah pulih kembali. Gabriel mengangguk, “Ayo, kita serang bersama-sama! Theo, Jeano, mundur! Jaga Celesta!” serunya.  “Aku mau ikut menyerang!” Celesta yang baru sadar dari pingsannya langsung protes. Namun aksi protesnya itu tidak berlangsung lama karena dia tidak kuat untuk berdiri, bahkan untuk memegang tombaknya sendiri.  “Sudah, istirahat dulu, biar yang lebih jago menyerang, kita siapkan potion pendukung saja dan berdoa agar mereka bisa mengalahkan si Ilfang itu,” ucap Theo menenangkan.</p>
+
+        <p>Theo sendiri sudah cukup kewalahan hanya dengan menyerang monster gendut tersebut. 
+        Bagaimana dengan pemain lain yang tidak beristirahat dari tadi? Pikirnya. Dia menyiapkan beberapa health potion untuk keadaan darurat, namun penyerangan berjalan cukup lancar. “Nara, kamu serang kepalanya ya, usahakan lompat yang cukup tinggi, kalau bisa kamu tendang saja kepalanya!” ucap Gabriel di tengah berisiknya pedang yang saling beradu. Nara mengangguk, “Akan kutendang sekuat tenaga, ayo!” Nara kembali menyerang, dia menancapkan pedangnya di salah satu punggung Ilfang setelah melompat tinggi. Kemudian, dia kembali melompat dan menendang sekuat tenaga wajah jelek si Bos Monster tersebut hingga terhuyung. Selagi teman-temannya maju menyerang, Alta terdiam selama beberapa detik untuk menganalisa serangan monster itu dan lantas dia berlari cepat. Lalu, dia merendahkan diri dan menusuk bagian bawah monster itu.</p>
+
+        <p>ARGHHHH!</p>
+
+        <p>Sang monster menjerit dengan merana dan HP bar nya otomatis berkurang jauh. Alta menyeringai dan kembali menyerang bagian belakang Ilfang The Kobold Lord.</p>
+
+        <p>“YES!” </p>
+
+        <p>Pada beberapa detik terakhir yang sangat menegangkan itu, serangan teman-temannya tidak main-main. Sampai akhirnya Jeano memperhatikan monster itu meledak menjadi serpihan dan hancur.</p>
+
+        <p>CONGRATULATION!</p>
+
+        <p>Tulisan besar itu terpampang jelas di hadapannya. Mereka berhasil mengalahkan Bos Monster lantai satu.</p>
+
+        <p>“Akhirnya…” ia mengembuskan napas lega.</p>
+
+        <br>
+        <h4>ACT. IV. LEAVE OR STAY</h4>
+        <h4>𝑇𝑜𝑙𝑏𝑎𝑛𝑎 𝐶𝑖𝑡𝑦, 𝐹𝑖𝑟𝑠𝑡 𝐹𝑙𝑜𝑜𝑟</h4>
+
+        <p>“KENAPA? KENAPA KAMU MEMBIARKAN DIA MATI?” seseorang yang kemarin membuat keributan di forum pun menjerit tidak terima. Lantas, semua pemain terdiam, ruangan juga kembali gelap. Theo menghela napas, dia membantu Celesta berdiri dari duduknya. “Dia sendiri yang tidak mau meminum health potion,” gumamnya. “Kenapa kalian tidak memberitahukan pada kami kalau ternyata serangan Bos Monsternya berubah?” </p>
+
+        <p>“Kamu pikir kita tahu hal itu akan terjadi?” balas Gabriel dengan tatapan tajam. “Kamu monster! Kamu pasti anggota beta tester!” seruan itu membuat Gabriel menggerutu pelan. “Lantas?” tantang Gabriel. “Benar kan kamu beta tester? Cheater juga? BEATER YA?!” seru orang itu. “Lalu kenapa kalau mereka beta tester? Mereka sama dengan kalian. Sama-sama memulai dari awal kembali. Apakah itu tidak adil?” ujar Jeano menanggapi. Belum sempat pemain lain membalas ucapannya, dia sudah mendengar suara tawa yang sangat mengejek.</p>
+
+        <p>“Hahaha.” Altaraine menoleh dan menatap tajam orang yang menuduh teman-temannya. Padahal, faktanya hanya setengah dari guild mereka yang merupakan anggota beta tester.  Hanya tawa yang mengejek itu saja yang keluar dari mulutnya, dia memakai jubah yang didapat dari last attack item dan keluar dari ruangan tersebut. Andai saja mereka tahu betapa sulitnya mengalahkan 100 lantai hanya dengan 1000 orang saja. “Ayo.” Nara mengajak teman satu guild-nya juga ikut keluar dari ruangan itu. Bos Monster sudah terkalahkan, jadi menurutnya mereka sudah tidak punya urusan lagi di sana. Namun, dia kembali memikirkan tuduhan tersebut. Memang kenapa kalau aku seorang beta tester? Pikirnya.</p>
+
+        <p>Dia melirik sejenak ke arah pemain lain sebelum benar-benar berjalan keliar ruangan. Sesampainya di luar ruangan, Celesta segera bersandar pada dinding batu yang dingin dan gelap. Dia menghela napas. “Apa itu benar? Apa … Kalian semua adalah beta tester?” tanyanya dan memandang mereka satu per satu. “Kita mau tetap satu guild atau pisah?” tanya Nara memastikan ketika mereka berada di sebuah restoran makanan cepat saji. Dia tengah menyantap burger yang disebut oleh Jeano sebelum mengalahkan Bos Monster. “Aku sih tidak keberatan kalau kita masih satu guild,” tambahnya. Kemudian, ia lanjut menikmati burger yang menurutnya enak tersebut. Untung saja, di kota ini terdapat zona aman, restoran, dan juga penginapan.</p>
+
+        <p>Theo memakan kentang gorengnya dan mengangguk, “Kita bisa selalu saling membantu untuk leveling dan mengalahkan Bos Monster lantai selanjutnya.” “Tetapi, jika ada yang ingin pergi, aku tidak akan memaksa.” Alta tersenyum tipis, “Memangnya kalian ingin satu guild dengan beater?”</p>
+
+        <p>“Beta tester dan cheater?” tanyanya dengan nada santai, namun membuat teman satu guild-nya terkejut. “Kurasa tidak ada yang ingin.” Dia melirik ke arah Theo yang diam memakan makanannya tanpa bersuara. Theo berdeham, dia meneguk sodanya sebelum mulai bersuara, “Bukannya tidak setuju,” elaknya. “Aku malah takut membebani kalian karena level kita tentu tidak sama, bukan? Aku tidak keberatan kok.” Gabriel menyelesaikan satu buah burgernya dan menjawab, “Level kita tidak sama … itu benar, tetapi itu bukannya menguntungkan ya?” Ia memperhatikan anggota guild-nya satu per satu. “Kita bisa membantu kalian untuk leveling lebih cepat,” tambahnya.</p>
+
+        <p>“Jadi semuanya setuju jika guild ini tetap ada?” semuanya mengangguk setuju, dan Gabriel menyantap burger keduanya. “Jika guild kita sekuat ini, mungkin minggu besok kita sudah bisa melawan Bos Monster lantai dua?” Ucapan asal bunyi dari Celesta membuat teman satu guild-nya tertegun, bahkan Alta hampir tersedak soda yang dia minum.</p>
+
+
+        <br>
+        <h4>ACT. V. EPILOGUE</h4>
+        <h4>𝑈𝑟𝑏𝑢𝑠 𝐶𝑖𝑡𝑦, 𝑆𝑒𝑐𝑜𝑛𝑑 𝐹𝑙𝑜𝑜𝑟</h4>
+
+        <p>Pagi-pagi sekali mereka bersiap meninggalkan penginapan dan menuju restoran terdekat untuk sarapan. Jeano menatap teman satu guild-nya, alisnya mengerut saat melihat temannya kurang satu. “Alta ke mana?” tanyanya mengundang kebingungan juga dari para temannya. Sejak selesai mengadakan pertemuan singkat sebelum tidur semalam, menurutnya Alta menjadi lebih pendiam. “Ah, sepertinya dia sudah meninggalkan kota ini lebih pagi,” jawab Nara ragu.</p>
+
+        <p>Seingat Nara, semalam mereka juga tidak debat sama sekali, bahkan obrolan semalam pun terkesan lebih santai. “Mungkin ingin menyusul barisan depan yang sudah berada lebih jauh dari kota ini,” ujar Nara. Semoga saja temannya yang satu itu tidak kenapa-kenapa, mengingat Alta sering tidur sembarangan jika melihat padang rumput. Jeano mengangguk, “Jadi, kita hari ini akan meninggalkan Tolbana?” Dia mengedarkan pandangan, saat ini mereka berada di alun-alun kota Tolbana yang terdapat air mancur besarnya.</p>
+
+        <p>Rasanya enggan meninggalkan kota yang terlihat ‘normal’ dengan banyaknya para pemain yang bercengkrama. Hal itu membuatnya seperti tidak perlu berjuang mengalahkan monster, mengejar, dan berusaha menyelesaikan game, namun itu mustahil. “Kita ke kota berikutnya, yaitu Urbus, dan lebih baik tidak memakai crystal untuk teleport,” ujar Gabriel. Dia bangun dari duduknya di kursi taman dan mereka pun mulai berjalan kaki dengan Gabriel yang memimpin di depan. </p>
+
+        <p>Setelah menyelesaikan lantai satu kemarin, mereka harus cepat-cepat tiba di lantai dua, dan berhubung dia sudah hafal dengan map-nya, tentu saja dia tahu ke mana mereka harus pergi. “Simpan crystal teleport kita untuk hal yang lebih penting.” Mereka berjalan cukup jauh dari kota Tolbana—sekitar satu jam, dan mulai memasuki hutan yang rindang. Nara menoleh ke arah kanan dan kiri, berjaga-jaga, sesekali mereka menebas monster-monster berukuran kecil yang muncul.</p>
+
+        <p>Selama di perjalanan, Celesta berceloteh—mengomentari apa saja yang dia temui, dan Nara beserta para temannya hanya mendengarkan. “Celesta, tunggu,” ucap Nara tiba-tiba. Ratusan meter di hutan yang mereka lalui terlihat semakin lama semakin rimbun, banyak berbagai jenis pohon yang tidak dia tahu namanya. Tanpa sadar Celesta berjalan lebih dulu dari teman satu guild-nya, dan dia mendengar Theo berteriak.</p>
+
+        <p>“CELESTA! BERHENTI!”
+
+        <p>Teriakan itu membuat jantungnya mendadak berdegup kencang, dia berhenti melangkah dan matanya melotot. Jika Celesta terlambat satu langkah saja, dia sudah terjatuh dari tebing yang tingginya lebih dari tiga meter itu. Theo menghela napas berat, untung saja dia cepat-cepat menarik jaket sang gadis, jadi Celesta tidak lantas jatuh dari tebing. “Makanya kalau jalan tuh lihat ke depan!” omelnya, teman-temannya tentu masih terkejut juga. Dia menarik mundur Celesta agar menjauhi tepi jurang dan memindai sekitar dan melihat anak tangga yang tidak jauh darinya. “Sepertinya itu exit area-nya,” ucap Theo.</p>
+
+        <p>Di hadapan mereka terlihat jelas sebuah tangga yang berliku-liku, ada sekitar 48 langkah untuk setiap tangganya. “Yosh, semangat semuanya!” mereka pun perlahan menaiki tangga tersebut. Mereka mulai menaiki anak tangga yang sangat banyak itu dan setibanya mereka di ujung tangga, Jeano mengerjapkan mata. Dia menatap ke arah yang jauh di depan sana, “Terlihat sangat berbeda dengan Tolbana ya, ini … seperti daerah pegunungan.”</p>
+
+        <p>Mereka tiba di dekat gerbang masuk Kota Urbus, yang mana di sekitar mereka terhampar pegunungan dan bukit-bukit hijau. “Ini lantai dua ya?” gumamnya. “Kukira tampilannya akan sama seperti Kota Tolbana atau Kota Awal, ternyata lebih indah dan sejuk,” ucapnya tersenyum kecil. Celesta menoleh, “Yosh, bagaimana kita istirahat untuk makan siang dahulu?” Disetujui oleh teman guild-nya, mereka pun memasuki kota tersebut yang terlihat cukup sepi di siang menjelang sore hari ini. “Aku penasaran ada makanan apa saja di sana, oh ya, sudah mendapat informasi mengenai Bos Monster selanjutnya?”</p>
+
+
+        <p>Gabriel menatap hamparan pegunungan hijau di depannya yang mulai terganti dengan suasana perkotaan yang nyaman. “Belum ada, tetapi menurut informasi yang kudapat tentang Urbus … Jaga barang bawaan kalian,” ingatnya.Urbus terlihat seperti desa yang sederhana, tidak seperti kota lain yang bergelimang lampu-lampu dan bangunan mewah, Gabriel merasa kota ini ketimpangan sosialnya terlihat jelas.</p>
+
+        <p>“Semoga saja kita tetap selamat sampai hari penyerangan berikutnya,” ujarnya.</p>
+
+    </div>
+</body>
+</html>

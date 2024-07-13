@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flip Book - Samuel</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap" rel="stylesheet">
+</head>
+<style>
+    
+    @import url("https://fonts.googleapis.com/css2?family=Judson&family=Quando&display=swap");
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        display: grid;
+        justify-items: center;
+        font-family: "Judson", serif;
+
+        --brown: rgb(90, 55, 8);
+        --bkg: rgb(255, 255, 232);
+
+        background-color: var(--bkg);
+        background-image: url("https://www.transparenttextures.com/patterns/cream-paper.png");
+    }
+
+    p {
+        line-height: 30px;
+        text-align: justify;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    p > span {
+        font-weight: 400;
+        font-style: italic;
+        display: block;
+        padding: 1em 3em;
+        font-size: 1.2rem;
+    }
+    p > strong {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    h1,
+    h2,
+    h3 {
+        font-family: "Quando", serif;
+        color: var(--brown);
+    }
+
+    .bkg {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 900px;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+        opacity: 0.5;
+        mix-blend-mode: exclusion;
+    }
+    .bkg img {
+        width: 100%;
+        height: auto;
+    }
+
+    .page {
+        width: 100%;
+        max-width: 800px;
+        padding: 1em;
+        font-size: 18px;
+        position: relative;
+        z-index: 1;
+    }
+    .page h1 {
+        font-size: 3rem;
+        margin: 1em 0 0.1em;
+        justify-self: end;
+    }
+    .page h2 {
+        font-size: 1.4rem;
+        justify-self: end;
+    }
+    .page h3 {
+        font-weight: normal;
+        margin: 2em 0 3em;
+        font-size: 1rem;
+        justify-self: end;
+    }
+
+    .back-link {
+        position: fixed;
+        top: 20px; /* Adjust the top distance as needed */
+        left: 20px; /* Adjust the left distance as needed */
+        background-color: #ffffff; /* Optional: Set background color for better visibility */
+        padding: 10px;
+        border-radius: 5px;
+        z-index: 1000; /* Ensure it's above other content if necessary */
+    }
+
+</style>
+<body>
+    <div class="bkg">
+        <img src="https://www.sicontis.com/codepen/cpc-book-text/flowers.png" alt="flowers background">
+    </div>
+    <div class="page">
+
+        <a href="./book.html"  class="back-link">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                <path fill="currentColor" d="M6.5 3L2 7.5l4.5 4.5V9h7V7H6.5V3z"/>
+            </svg>
+            Back to List Plot
+        </a>
+    
+        <h1>PLOT STORY</h1>
+        <h2>by GUILD : GU1LD</h2>
+        <br>
+        <p>Sore itu adalah pertama kali bagi Devian untuk mencoba permainan MMORPG dengan bantuan NerveGear. Meskipun sebelumnya ia adalah beta tester, namun ia sudah tidak sabar menanti perilisan resmi dari game ini. Sudah sejak pulang sekolah tadi ia tidak sabar menanti. Melangkah masuk ke dalam dunia virtual SAO, ia lansung terpana oleh keindahan Aincrad. Lanskap yg luas & memukau membentang di depannya, hamparan hijau tampak begitu nyata. Sensasi angin yg sejuk, suara burung berkicau membuatnya sejenak lupa bahwa ini hanyalah sebuah permainan. Ia mengecek inventaris miliknya dan mengambil pedang rapier miliknya, ia mencoba mengayunkan pedangnya. “Wah, gerakannya lebih smooth ya.” gumamnya sendiri. Sepuluh menit kemudian, selagi mencoba beberapa task kecil seperti melawan monster rendahan, ia bertemu dengan Evan. “Wah ternyata kamu juga ikut main lagi ya?” tanya Evan. "Iya. gasabar setelah rilis bakal ada update apa lagi di sini! Denger denger musuhnya bakal makin banyak.", jawab Dev. Evan hanya mengangguk. Keduanya sempat bertemu menyelesaikan beberapa misi saat masih menjadi beta tester. Dua putaran misi dijalankan mereka bersama, ketika Evan yang ingin ijin sebentar ketika teringat ia masih harus membayar paket COD, dikagetkan karena tidak ada tombol logout di bar menu miliknya. Masih dilanda kebingungan yang amat sangat, keduanya tiba-tiba berteleportasi ke alun-alun kota utama. Devian dan Evan saling berpandangan. "Ini kita di teleport paksa ya?" Mereka tidak sendiri, disamping mereka berada ribuan pemain lainnya kemudian dipanggil ke alun-alun kota utama oleh sistem permainan. Keduanya sekali lagi mencoba mengecek tombol logout dan menekan tombol bantuan. Langit biru yang semula indah dipandang tiba-tiba berubah menjadi merah kelam, dan sesosok besar berjubah merah muncul di atas mereka. Kayaba Akihiko, pencipta SAO, dengan suara menggema, ia mengumumkan bahwa mereka semua terjebak di dalam permainan dan tidak bisa keluar. Satu-satunya cara untuk bebas adalah dengan menyelesaikan 100 lantai Aincrad. Jika mereka mati di dalam permainan, mereka juga akan mati di dunia nyata. Kepanikan menyeruak seisi alun alun kota.</p>
+
+        <p>Beberapa pemain yang sudah mengenal satu sama lain di dunia nyata nampak berkumpul menjadi satu, sementara yang lain hanya diam belum bisa menerima kenyataan. Claretta menggenggam pedang miliknya dengan kuat. Sebelumnya ia adalah beta tester yang cukup lihai melawan para monster sampai ke lantai ke lima. Ia menoleh kanan kiri, banyak wajah asing yang tidak ia kenali karena kini penampilan mereka kembali seperti di dunia nyata. Menghela napas perlahan, ia mencoba mencari manakah yang menjanjikan untuk diajak satu kelompok. Secara acak, ia kemudian mendekati Devian dan Evan yang tampak bergumul sendiri. "Pedang itu!! Itu level 3 kan? Kalian pernah main kan sebelumnya?" tuduh Claretta pelan kepada Devian. Devian sedikit menoleh ke arah Claretta. "Kalau iya memang kenapa?" Devian tidak mau kalau tiba-tiba saja ada orang tidak dikenal menghakiminya hanya karena ia salah satu beta tester. </p>
+
+        <p>"Berarti kamu beta tester ya?" tunjuk Claretta langsung. "Mau gabung guild denganku tidak? Aku juga beta tester." Devian dan Evan masih memandangnya keheranan. “Aku yakin kalau sesama beta tester jadi satu aliansi, kita bakal semakin kuat dan semakin mudah menyelesaikan misi tiap lantai.” "Kau tahu sendiri beberapa monster perlu diselesaikan secara berkelompok kan?" tawar Claretta lagi. “Aku sudah mencapai lantai 5 selama 2 bulan tester.” Akhirnya keduanya setuju dan saling menambahkan pertemanan. Mereka juga membuat aliansi baru dengan nama GU1LD. Evan menoleh ke arah teman barunya itu, "Tapi sepertinya kita tetap perlu merekrut beberapa orang lagi agar guild ini menjadi lebih kuat." Dan beruntung dua teman barunya itu mengiyakan saja. Ketiganya kemudian menjauhi kerumunan dan memasuki kawasan perbelanjaan Aincrad. Di sudut lain alun-alun kota, Jody merasa hatinya tercekat. Ia baru saja memainkan permainan ini tidak lebih dari dua jam namun ia harus dihadapkan kenyataan ahwa ini bukan lagi sekadar permainan, tetapi perjuangan hidup dan mati. Ia menggenggam gemetar pedang kayu miliknya yang masih belum bertambah level sejak tadi sore. Namun hati kecilnya menyuruhnya untuk tidak tinggal diam dan menunggu, ia harus bertindak cepat untuk bertahan hidup. Ia melihat kearah kerumunan dan kemudian meninggalkan alun-alun untuk mencoba menaikkan kemampuannya sendiri. </p>
+
+        <p>Di hamparan padang luas jauh dari kota, Jody mengerahkan kekuatannya untuk melawan babi hutan level rendahan agar kemampuannya segera bertambah. Waktupun berlalu. Sudah dua minggu Jody bertahan sendiri. Kini ia memegang pedang rapier miliknya dengan sedikit gugup. Pertarungan dimulai dengan cepat. Monster serigala itu melompat ke arah Jody dengan cakar yang tajam dan taring yang mengerikan. Meskipun Jody dengan gesit menghindar dan mengayunkan pedangnya, serangan darinya tidak cukup membuat si serigala limbung. Dengan cepat dan kasar, monster itu menggigit lengannya yang menyebabkan bar HP-nya turun drastis. Jody panik. Disaat itulah ia bertemu dengan Devian dari GU1LD yang diikuti oleh dua teman lainnya, membantu menyerang sang serigala. Devian melompat tinggi dan menghentakkan rapier miiknya ke arah serigala. Beberapa tebasan berulang juga dilontarkan dari arah Claretta dan Evan yang muncul belakangan. Bar darah milik serigala berangsur menipis. Akhirnya, dengan satu serangan terakhir, Jody berhasil mengalahkan monster serigala itu. Jody tersungkur lemas. Ia hampir saja kehilangan nyawa di dunia game maupun dunia nyata. Kemudian ia menoleh ke arah tiga pemain lain yang telah membantunya. "Terima kasih sudah membantuku. Aku benar-benar payah tapi juga masih ingin hidup," ujar Jody lalu tertawa miris.</p>
+
+        <p>Devian menepuk bahu Jody. "Kau tidak seburuk itu, hanya lagi sial. Tenanglah. Kau aman sekarang." Ia lalu memberi kode lewat tatapan mata pada Claretta yang langsung diberi anggukan kecil oleh gadis itu. "Bagaimana kalau kau bergabung dengan guild kami? Ayo naik level dan selesaikan game ini bersama." tawar Claretta. Masih mengatur napas, sebuah bar notifikasi muncul di hadapan Jody.</p>
+
+        <p style="font-style:bold">𝘊𝘭𝘢𝘳𝘦𝘵𝘵𝘢 𝘪𝘯𝘷𝘪𝘵𝘦𝘴 𝘺𝘰𝘶 𝘵𝘰 𝘢 𝘱𝘢𝘳𝘵𝘺, 𝘥𝘰 𝘺𝘰𝘶 𝘸𝘢𝘯𝘵 𝘵𝘰 𝘫𝘰𝘪𝘯?</p>
+
+        <p>Tanpa pikir panjang, Ia pun langsung menerima undangan pertemanan tersebut. Tak tanggung-tanggung, ia dihadiahi tiga botol ramuan penyembuh untuk memulihkan bar HP-nya yang sudah berwarna oranye itu.</p>
+
+        <hr>
+
+        <p>Sudah hampir lima minggu para pemain terpaksa bertahan di Aincard, ratusan peserta dinyatakan meninggalkan permainan, dan ribuan lainnya terpaksa tidak bisa melanjutkan permainan karena kalah bertarung. Kota Utama terasa begitu sepi, tak lagi seramai dulu.Siang ini akan diadakan sebuah rapat untuk menjadwalkan serangan melawan Bos di lantai pertama. Betul, sudah tiga minggu namun mereka belum selesai juga menghabisi lantai utama permainan. Belum lama pertemuan dimulai, sudah nampak keramaian yang muncul. Beberapa pemain melanjutkan perjuangan mereka, menambah kemampuan dan skill bertarung, termasuk bergabung ke aliansi yang dirasa kuat untuk melawan monster berlevel tinggi. Marvin duduk dengan tudung jubah yang menutupi kepalanya, menghindari sinar matahari terik yang tampak nyata di dunia permainan ini. Duduk di salah satu kursi penonton memandang “pemimpin rapat” di depan sana. Di sebelah Marvin, ada seorang gadis yang ikut duduk menggenggam gagang sabit besar miliknya, namanya Mirae. Sudah dua minggu mereka berkenalan kemudian bergabung aliansi bersama untuk memerangi monster di belasan lantai. Iya grup ini hanya terisi untuk mereka berdua saja. “Besok melawan Bos Monster di lantai satu kan?” ujarnya sembari membaca buku petunjuk yang ia dapat di salah satu toko NPC. </p>
+
+        <p>Oleh Mirae pun, Marvin diajarkan untuk selalu mengecek buku petunjuk umum buatan para beta tester sebelum memulai quest.  Mirae menganggukkan kepala dan menyenggolnya ketika di depan sana ada perdebatan mengenai beta tester yang dianggap curang. Mirae sendiri adalah salah satu dari pemain terpilih untuk menjadi beta tester. Memang benar menjadi beta tester membawa keuntungan sendiri baginya. Namun jelas tujuannya bukan untuk ajang menyombongkan diri seperti yang dituduhkan para pemain rendahan di bawah sana. Ia sendiri bersama Marvin, pemain non-beta tester yang ia temui kebingungan di salah satu toko roti di dekat alun-alun kota itu, saling membantu informasi seputar musuh di tiap lantai, maupun tips dan tricks memilih inventaris items yang berguna. </p>
+
+        <p>Malam itu sembari menikmati makan malam mereka di salah satu kedai di Kota Utama, Mirae menunjukkan dua botol ramuan yang bisa menambahkan status agility di atas meja. “Ini dari aliansi GU1LD.” ujarnya sambil mengendikkan bahunya ke arah sudut ruangan kedai. “Mereka ingin kita bergabung dengan guild mereka sih. Dua botol ramuan ini adalah ‘sogokan’ mereka. Menurutmu gimana?” tanya Mirae sembari menyesap teh hijau yang ia pesan tadi. Marvin yang asik mengunyah mie bakso miliknya memandang ke arah Mirae, kemudian mengangguk pelan. “Berarti kamu tertarik untuk join?” tanya Mirae kembali. “Kenapa? Kamu tidak?” tanya Marvin balik. Mirae menghela napas. “Tidak juga, hanya salah aku ragu dengan semakin besar aliansi maka hadiah yang didapat juga harus dibagi lebih banyak bukan?” Marvin yang masih mengunyah makanannya mulai menimbang omongan dari Mirae. Jujur saja sebenernya apapun masalahnya ia percayakan pada gadis yang ia percaya lebih dapat diandalkan daripada dirinya sendiri itu. Semakin ke sini, hadiah yang turun dari para bos tidak terlalu bagus. Akhirnya ia mengangguk setuju. “Ah .. Benar juga, berarti kita lihat saja lah besok bagaimana permainan mereka, kalau bagus dan kita berhasil mengalahkan monster sialan itu, tidak ada salahnya kita terima saja ajakan mereka.” Ke esokan harinya, puluhan pemain akhirnya bergabung mengikuti.</p>
+
+        <p>Dinding-dinding gelap berwarna kelabu tua dengan pilar tinggi yang menjulang dari langit-langit seperti gigi raksasa, memberikan aura menakutkan. Cahaya lentera muncul ke permukaan ketika kaki mereka memasuki arena, seakan memberi ucapan selamat datang menciptakan bayangan - bayangan yang bergerak tak menentu di sisi ruangan. Para aliansi melangkah hati-hati, siap menghadapi apa pun yang ada di depan. Di tengah ruangan, monster setinggi dua meter berdiri tegak. Monster itu adalah setengah manusia setengah anjing, dengan tubuh berotot. Matanya berwarna terang menyala, dan otot-otot di seluruh tubuhnya, bergerak dengan kekuatan yang mengerikan. Dalam cengkeramannya, sang monster menggenggam sebuah kapak besar yang tampak berat. Serangan pertama diberikan oleh aliansi lain yang malah menghempaskan mereka jauh kebelakang. Mirae mengambil posisi menyerang sementara Marvin bergerak ke samping untuk mencari celah. Illfang, si monster mengayunkan kapaknya dengan kecepatan yang mengejutkan, memaksa Marvin untuk menangkis dengan pedangnya. Benturan antara pedang dan kapak menghasilkan suara logam yang bergema di seluruh ruangan. Claretta, dengan kelincahannya, melompat ke belakang Illfang dan menebas kakinya, mencoba mengurangi mobilitas monster itu. Serangan Claretta berhasil membuat Illfang berlutut sejenak, memberikan Devian kesempatan untuk menyerang dari depan. Devian melompat tinggi dan melancarkan serangan bertubi-tubi ke arah dada monster itu, mengincar titik lemahnya. </p>
+
+        <p> Devian kesakitan, darah merah gelap mengalir dan bar miliknya menurun perlahan. Namun, monster itu belum menyerah. Jody yang kini sudah jauh berkembang menusukkan pedangnya ke arah punggung Ilffang. Aliansi lainnya menyusul memberikan serangan.  Dengan kekuatan terakhirnya, Illfang mengayunkan kapaknya ke arah Jody. Melihat serangan itu, Mirae segera melompat di depan Jody dan menangkis serangan tersebut dengan sabit besarnya sekuat tenaga. Dengan serangan bertubi-tubi dari aliansi GU1LD dan juga bantuan duo M, Marvin dan Mirae, yang bekerja sama dengan sempurna, monster itu mengeluarkan erangan terakhir sebelum tubuhnya lenyap menjadi partikel-partikel cahaya. Seisi ruangan hening hanya diisi oleh erangan kesakitan dan hembusan napas terengah-engah dari para pemain lain. Mereka berhasil mengalahkan musuh yang tangguh itu dengan keberanian dan kerjasama yang luar biasa. Claretta dan Mirae berdiri di tengah ruangan yang kini sunyi, napas mereka terengah-engah namun dengan senyum kemenangan di wajah. "Kalian jadi bergabung dengan GU1LD?" tanya Clarretta. Mirae menoleh ke arah Marvin yang mengangguk kemudian kembali tersenyum ke arah Claretta sembari menjabat tangannya. Sebuah notifikasi pengajuan pertemanan muncul. Dan sejak itu keenam pemain ini tergabung ke aliansi GU1LD dan melanjutkan perjalanan mereka di dalam permainan siap menghadapi tantangan berikutnya. Mereka berjanji akan berasama menuntaskan 100 lantai Aincrad. </p>
+
+    </div>
+</body>
+</html>
